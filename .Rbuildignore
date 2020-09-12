@@ -1,0 +1,10 @@
+^pkgdown$
+^README\.Rmd$
+^docs$
+^_pkgdown\.yml$
+^\.travis\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$
+^scss$
+^\.sass-cache$
+^\.github$
