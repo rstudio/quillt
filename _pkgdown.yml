@@ -1,6 +1,8 @@
 template:
   package: quillt
 
+url: https://apreshill.github.io/quillt/
+
 development:
   mode: auto
 
