@@ -91,9 +91,26 @@ p a {
   padding-top: 1em;
 }
 
+.navbar-brand {
+  background-image: url(reference/figures/rmarkdown.png);
+  background-size: 32px auto;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
 .navbar .info .version-danger {
   font-weight: bold;
   color: #126180;
+}
+
+/* make room in navbar for longer text */
+.navbar .info {
+	float: left;
+	height: 50px;
+	width: 160px;
+	font-size: 80%;
+	position: relative;
+	margin-left: 5px;
 }
 
 .navbar-nav li a {
