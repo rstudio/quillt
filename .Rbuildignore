@@ -8,3 +8,4 @@
 ^scss$
 ^\.sass-cache$
 ^\.github$
+^vignettes
