@@ -21,9 +21,6 @@ template:
 
 development:
   mode: auto
-
-home:
-  strip_header: true
 ```
 
 You can customise the “part of” in the header and the footer text.
