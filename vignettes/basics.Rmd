@@ -1,5 +1,7 @@
 ---
 title: "Dashboard basics"
+resource_files:
+  - snippets
 ---
 
 

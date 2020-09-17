@@ -14,7 +14,7 @@ function loadSnippet(snippet, mode) {
   editor.session.setMode("ace/mode/" + mode);
   editor.session.getSelection().clearSelection();
 
-  $.get("assets/snippets/" + snippet + ".md", function(data) {
+  $.get("snippets/" + snippet + ".md", function(data) {
     editor.setValue(data, -1);
     editor.setOptions({
       maxLines: editor.session.getLength()
