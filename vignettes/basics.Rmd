@@ -1,0 +1,45 @@
+---
+title: "Dashboard basics"
+---
+
+
+## Components
+
+You can use flexdashboard to publish groups of related data visualizations as a dashboard. A flexdashboard can either be static (a standard web page) or dynamic (a [Shiny](http://shiny.rstudio.com) interactive document). A wide variety of components can be included in flexdashboard layouts, including:
+
+1. Interactive JavaScript data visualizations based on [htmlwidgets](http://www.htmlwidgets.org).
+
+2. R graphical output including base, lattice, and grid graphics.
+
+3. Tabular data (with optional sorting, filtering, and paging).
+
+4. Value boxes for highlighting important summary data.
+
+5. Gauges for displaying values on a meter within a specified range.
+
+6. Text annotations of various kinds.
+
+See the [dashboard components](using.html#components) documentation for additional details on the use of each component type.
+
+## Layout
+
+### Single Column (Fill)
+
+Dashboards are divided into columns and rows, with output components delineated using level 3 markdown headers (`###`). By default, dashboards are laid out within a single column, with charts  stacked vertically within a column and sized to fill available browser height. For example, this layout defines a single column with two charts that fills available browser space:
+
+<div class="row">
+
+<div class="col-md-5">
+<div id="singlecolumn"></div>
+<script type="text/javascript">loadSnippet('singlecolumn')</script>
+</div>
+
+<div class="col-md-7">
+<div height="420px" width="100%">
+<img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 1">
+<img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 2">
+</div>
+</div>
+
+</div>
+
