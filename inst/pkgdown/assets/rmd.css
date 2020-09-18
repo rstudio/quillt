@@ -93,10 +93,13 @@ p a {
 }
 
 .navbar-brand {
-  background-image: url(reference/figures/rmarkdown.png);
+  /*background-image: url(reference/figures/rmarkdown.png);
   background-size: 32px auto;
   background-repeat: no-repeat;
-  background-position: 15px center;
+  background-position: 15px center;*/
+	padding: 0 0 0 15px;
+	height: 50px;
+	line-height: 50px;
 }
 
 .navbar .info .version-danger {
@@ -106,12 +109,16 @@ p a {
 
 /* make room in navbar for longer text */
 .navbar .info {
-	float: left;
+  background-image: url(reference/figures/rmarkdown.png);
+  background-size: 32px auto;
+  background-repeat: no-repeat;
+  background-position: 160px center;
+	float: right;
 	height: 50px;
-	width: 160px;
+	width: 192px;
 	font-size: 80%;
 	position: relative;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .navbar-nav li a {
@@ -399,3 +406,5 @@ a.anchor {
 	background-size: 20px 20px;
 	background-position: center bottom;
 }
+
+
