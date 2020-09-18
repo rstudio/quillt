@@ -109,7 +109,7 @@ p a {
 
 /* make room in navbar for longer text */
 .navbar .info {
-  background-image: url(reference/figures/rmarkdown.png);
+  background-image: url(rmarkdown.png);
   background-size: 32px auto;
   background-repeat: no-repeat;
   background-position: 160px center;
