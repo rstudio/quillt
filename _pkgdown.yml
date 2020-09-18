@@ -16,6 +16,8 @@ navbar:
   - text: Reference
     href: reference/index.html
   right:
+  - text: Article
+    href: articles/basics.html
   - text: News
     href: news/index.html
   - icon: fa-github fa-lg
