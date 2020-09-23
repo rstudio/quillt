@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# quillt <img src='man/figures/logo.png' align="right" height="139" />
+# quillt ![](man/figures/logo.png)
 
 ## Overview
 
@@ -21,6 +21,9 @@ template:
 
 development:
   mode: auto
+
+home:
+  strip_header: false
 ```
 
 You can customise the “part of” in the header and the footer text.
