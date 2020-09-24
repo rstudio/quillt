@@ -408,3 +408,8 @@ a.anchor {
 }
 
 
+a.thumbnail.active,
+a.thumbnail:focus,
+a.thumbnail:hover {
+	border-color: #FEDB00;
+}
