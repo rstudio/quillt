@@ -6,6 +6,7 @@
 
 :root {
   --pg-header: #096B72; /*green*/
+  --dk-header: #013631; /*darker green*/
   --a-hover: #405359;   /*dark grey*/
   --a-alpha: #6C797C;   /*dark grey white added*/
   --nav-bkg: #e6f3fc;   /*pale blue*/
@@ -25,21 +26,22 @@ body {
 
 /*
 h1 {font-size: 40px;}
-h2 {font-size: 30px;}
+h2 {font-size: 33px;}
 h3 {font-size: 23px;}
 h4 {font-size: 20px;}
 */
 
-h1 {font-size: 1.3em;}
-h2 {font-size: 1.2em;}
+h1 {font-size: 1.4em;}
+h2 {font-size: 1.3em;}
 h3 {
   font-size: 1.1em;
   text-transform: uppercase;
   font-weight: 600;
+  color: var(--dk-header);
 }
 h4 {
   font-size: 1.0em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 600;
 }
 
@@ -380,7 +382,7 @@ nav[data-toggle='toc'] .nav .nav > .active:focus > a {
   padding-top: 4px;
   padding-left: 3px;
   font-size: 0.9em;
-  color: gray;
+  color: var(--dk-header);
 }
 
 a.thumbnail:hover {
