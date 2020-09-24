@@ -84,7 +84,7 @@ thumbnail <- function(title, img, href, caption = TRUE) {
   )
 }
 
-#' Generate HTML for several rows of 4-wide bootstrap thumbnails
+#' Generate HTML for several rows of 3-wide bootstrap thumbnails
 #'
 #' @export
 thumbnails <- function(thumbs) {
