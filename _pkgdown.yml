@@ -13,11 +13,13 @@ navbar:
   title: ~
   type: default
   left:
+  - text: Get started
+    href: articles/basics.html
+  - text: Examples
+    href: articles/examples.html
+  right:
   - text: Reference
     href: reference/index.html
-  right:
-  - text: Article
-    href: articles/basics.html
   - text: News
     href: news/index.html
   - icon: fa-github fa-lg
