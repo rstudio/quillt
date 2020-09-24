@@ -4,9 +4,18 @@
     <loc>https://apreshill.github.io/quillt//index.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt//reference/test.html</loc>
+    <loc>https://apreshill.github.io/quillt//reference/examples.html</loc>
+  </url>
+  <url>
+    <loc>https://apreshill.github.io/quillt//reference/thumbnail.html</loc>
+  </url>
+  <url>
+    <loc>https://apreshill.github.io/quillt//reference/thumbnails.html</loc>
   </url>
   <url>
     <loc>https://apreshill.github.io/quillt//articles/basics.html</loc>
+  </url>
+  <url>
+    <loc>https://apreshill.github.io/quillt//articles/examples.html</loc>
   </url>
 </urlset>

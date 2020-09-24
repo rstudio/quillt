@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard basics • quillt</title>
+<title>Example projects • quillt</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -19,7 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../tidyverse-2.css" rel="stylesheet">
 <link href="../rmd.css" rel="stylesheet">
-<meta property="og:title" content="Dashboard basics">
+<meta property="og:title" content="Example projects">
 <meta property="og:description" content="quillt">
 <meta property="og:image" content="https://apreshill.github.io/quillt/logo.png">
 <meta name="twitter:card" content="summary">
@@ -84,62 +84,42 @@
 
       
 
-      </header><script src="basics_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="examples_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Dashboard basics</h1>
+      <h1 data-toc-skip>Example projects</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/apreshill/quillt/blob/master/vignettes/basics.Rmd"><code>vignettes/basics.Rmd</code></a></small>
-      <div class="hidden name"><code>basics.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/apreshill/quillt/blob/master/vignettes/examples.Rmd"><code>vignettes/examples.Rmd</code></a></small>
+      <div class="hidden name"><code>examples.Rmd</code></div>
 
     </div>
 
     
     
-<div id="components" class="section level2">
-<h2 class="hasAnchor">
-<a href="#components" class="anchor"></a>Components</h2>
-<p>You can use flexdashboard to publish groups of related data visualizations as a dashboard. A flexdashboard can either be static (a standard web page) or dynamic (a <a href="http://shiny.rstudio.com">Shiny</a> interactive document). A wide variety of components can be included in flexdashboard layouts, including:</p>
-<ol style="list-style-type: decimal">
-<li><p>Interactive JavaScript data visualizations based on <a href="http://www.htmlwidgets.org">htmlwidgets</a>.</p></li>
-<li><p>R graphical output including base, lattice, and grid graphics.</p></li>
-<li><p>Tabular data (with optional sorting, filtering, and paging).</p></li>
-<li><p>Value boxes for highlighting important summary data.</p></li>
-<li><p>Gauges for displaying values on a meter within a specified range.</p></li>
-<li><p>Text annotations of various kinds.</p></li>
-</ol>
-<p>See the <a href="using.html#components">dashboard components</a> documentation for additional details on the use of each component type.</p>
-</div>
-<div id="layout" class="section level2">
-<h2 class="hasAnchor">
-<a href="#layout" class="anchor"></a>Layout</h2>
-<div id="single-column-fill" class="section level3">
-<h3 class="hasAnchor">
-<a href="#single-column-fill" class="anchor"></a>Single Column (Fill)</h3>
-<p>Dashboards are divided into columns and rows, with output components delineated using level 3 markdown headers (<code>###</code>). By default, dashboards are laid out within a single column, with charts stacked vertically within a column and sized to fill available browser height. For example, this layout defines a single column with two charts that fills available browser space:</p>
+<p>The examples below illustrate the use of flexdashboard with various packages and layouts. If you want to learn more about how the dashboards were created each example includes a link to its source code.</p>
 <div class="row">
-<div class="col-md-5">
-<div id="singlecolumn">
-
+<div class="col-sm-4">
+<a class="thumbnail" title="NBA scoring with d3heatmap" href="https://beta.rstudioconnect.com/jjallaire/htmlwidgets-d3heatmap/">
+<img src="images/htmlwidgets-d3heatmap.png"><div class="caption">NBA scoring with d3heatmap</div>
+</a>
 </div>
-<script type="text/javascript">loadSnippet('singlecolumn')</script>
+<div class="col-sm-4">
+<a class="thumbnail" title="ggplotly: ggplot2 geoms" href="https://beta.rstudioconnect.com/jjallaire/htmlwidgets-ggplotly-geoms/">
+<img src="images/plotly.png"><div class="caption">ggplotly: ggplot2 geoms</div>
+</a>
 </div>
-<div class="col-md-7">
-<div height="420px">
-<p><img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 1"><img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 2"></p>
-</div>
-</div>
-</div>
+<div class="col-sm-4">
+<a class="thumbnail" title="Shiny: biclust example" href="https://jjallaire.shinyapps.io/shiny-biclust/">
+<img src="images/shiny-biclust.png"><div class="caption">Shiny: biclust example</div>
+</a>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
