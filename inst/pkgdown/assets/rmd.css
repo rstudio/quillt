@@ -114,13 +114,20 @@ p a {
   background-image: url(rmarkdown.png);
   background-size: 32px auto;
   background-repeat: no-repeat;
-  background-position: 160px center;
+  background-position: 0px center;
 	float: right;
 	height: 50px;
-	width: 192px;
+	width: 250px;
 	font-size: 80%;
 	position: relative;
-	margin-left: 10px;
+	margin-left: 15px;
+	padding-left: 45px;
+}
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+	padding-right: 15px;
+	border-right: 1px solid var(--accent);
 }
 
 .navbar-nav li a {
