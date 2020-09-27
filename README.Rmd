@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-quillt provides a custom [pkgdown](https://pkgdown.r-lib.org) template for the R Markdown ecosystem. Please don't use it for your own package.
+quillt is a [pkgdown](https://pkgdown.r-lib.org) template for packages in the R Markdown ecosystem. The goal of quillt is to create a patchwork quilt of all the packages that R Markdown users benefit from. That means packages that help users extend R Markdown using new output formats and templates, or that build upon existing packages to improve the quality of life for R Markdown users. If you feel that your package fits, please feel free to use this template for your own package. 
 
 The theme is built on top of the [paper bootswatch theme](https://bootswatch.com/3/paper/).
 

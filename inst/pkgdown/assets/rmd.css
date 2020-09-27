@@ -99,7 +99,7 @@ p a {
   background-size: 32px auto;
   background-repeat: no-repeat;
   background-position: 15px center;*/
-	padding: 0 0 0 15px;
+	padding: 0 0 0 10px;
 	height: 50px;
 	line-height: 50px;
 }
@@ -114,20 +114,20 @@ p a {
   background-image: url(rmarkdown.png);
   background-size: 40px auto;
   background-repeat: no-repeat;
-  background-position: 0px center;
+  background-position: 10px center;
 	float: right;
 	height: 50px;
 	width: 250px;
 	font-size: 80%;
 	position: relative;
-	margin-left: 15px;
-	padding-left: 45px;
+	margin-left: 10px;
+	padding-left: 60px;
+	border-left: 1px solid #C8CED0;
 }
 
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
-	padding-right: 15px;
-	border-right: 1px solid var(--accent);
+	padding-right: 10px;
 }
 
 .navbar-nav li a {
