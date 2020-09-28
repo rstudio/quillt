@@ -1,7 +1,7 @@
 template:
   package: quillt
 
-url: https://apreshill.github.io/quillt/
+url: https://education.rstudio.com/quillt/
 
 development:
   mode: auto
