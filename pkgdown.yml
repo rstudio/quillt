@@ -4,8 +4,8 @@ pkgdown_sha: ~
 articles:
   basics: basics.html
   examples: examples.html
-last_built: 2020-09-27T11:33Z
+last_built: 2020-09-28T14:52Z
 urls:
-  reference: https://apreshill.github.io/quillt//reference
-  article: https://apreshill.github.io/quillt//articles
+  reference: https://education.rstudio.com/quillt//reference
+  article: https://education.rstudio.com/quillt//articles
 
