@@ -435,3 +435,8 @@ a.thumbnail:hover {
 	vertical-align: baseline;
 	border-radius: .25em;
 }
+
+.headroom {
+  will-change: transform;
+  transition: transform 400ms ease;
+}

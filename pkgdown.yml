@@ -2,9 +2,9 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  basics: basics.html
   examples: examples.html
-last_built: 2020-09-28T15:04Z
+  quillt: quillt.html
+last_built: 2020-09-29T11:37Z
 urls:
   reference: https://education.rstudio.com/quillt/reference
   article: https://education.rstudio.com/quillt/articles
