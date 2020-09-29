@@ -14,7 +14,7 @@ navbar:
   type: default
   left:
   - text: Get started
-    href: articles/basics.html
+    href: articles/quillt.html
   - text: Examples
     href: articles/examples.html
   right:
