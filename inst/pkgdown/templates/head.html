@@ -84,8 +84,10 @@
   gtag('config', 'UA-115082821-1');
 </script>
 
+<!-- Add trailing slash for Netlify -->
+<script>if (!/(\/|html?)$/.test(window.location.href)){window.location.replace(window.location.href + '/');}</script>
+
 <!-- javascript assets for rmarkdown -->
 <script src="{{#site}}{{root}}{{/site}}ace-1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{#site}}{{root}}{{/site}}holder-2.9.0/holder.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{#site}}{{root}}{{/site}}snippets/snippets.js" type="text/javascript" charset="utf-8"></script>
-<script src="{{#site}}{{root}}{{/site}}extra.js" type="text/javascript" charset="utf-8"></script>
