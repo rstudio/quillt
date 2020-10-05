@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   examples: examples.html
   quillt: quillt.html
-last_built: 2020-10-02T00:49Z
+last_built: 2020-10-05T21:31Z
 urls:
   reference: https://education.rstudio.com/quillt/reference
   article: https://education.rstudio.com/quillt/articles
