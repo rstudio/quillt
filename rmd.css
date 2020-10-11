@@ -436,6 +436,7 @@ a.thumbnail:hover {
 	border-radius: .25em;
 }
 
+/* tweak headroom.js to not disappear as aggressively at the top of the page */
 .headroom {
   will-change: transform;
   transition: transform 400ms ease;
