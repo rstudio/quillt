@@ -9,14 +9,20 @@
         <span class="icon-bar"></span>
       </button>
 
-      <div class="navbar-brand-container">
+      <span class="navbar-brand">
+        <a class="navbar-link" href="{{#site}}{{root}}{{/site}}index.html">{{#site}}{{title}}{{/site}}</a>
+        <span class="version label label-{{#development}}{{version_label}}{{/development}}" data-toggle="tooltip" data-placement="bottom" title="{{#development}}{{version_tooltip}}{{/development}}">{{#package}}{{version}}{{/package}}</span>
+      </span>
+
+      <!--<div class="navbar-brand-container">
         <a class="navbar-brand" href="{{#site}}{{root}}{{/site}}index.html">{{#package}}{{name}}{{/package}}</a>
         <div class="info hidden-xs hidden-sm">
-          <span class="partof">part of {{#yaml}}{{{part_of}}}{{^part_of}} <a href="https://rmarkdown.io">rmarkdown.io</a>{{/part_of}}{{/yaml}}</span>
+          <span class="partof">part of {{#yaml}}{{{part_of}}}{{^part_of}} <a href=""></a>{{/part_of}}{{/yaml}}</span>
           <span class="version version-{{#development}}{{version_label}}{{/development}}" data-toggle="tooltip" data-placement="bottom" title="{{#development}}{{version_tooltip}}{{/development}}">{{#package}}{{version}}{{/package}}</span>
         </div>
-      </div>
+      </div>-->
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         {{{left}}}
