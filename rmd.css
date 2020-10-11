@@ -94,6 +94,7 @@ p a {
   padding-top: 1em;
 }
 
+
 .navbar-brand {
   /*background-image: url(reference/figures/rmarkdown.png);
   background-size: 32px auto;
@@ -102,27 +103,38 @@ p a {
 	padding: 0 0 0 10px;
 	height: 50px;
 	line-height: 50px;
+	font-size: 20px;
 }
 
+/* only when using navbar custom template */
 .navbar .info .version-danger {
   font-weight: bold;
-  color: #126180;
+  color: #fff; /* #126180 */
+}
+
+.navbar-brand .version {
+	font-family: "Work Sans", sans-serif;
+}
+
+.label-danger {
+	background-color: var(--a-alpha);
 }
 
 /* make room in navbar for longer text */
 .navbar .info {
-  background-image: url(rmarkdown.png);
+  /* background-image: url(rmarkdown.png);
   background-size: 40px auto;
   background-repeat: no-repeat;
-  background-position: 10px center;
+  background-position: 10px center; */
 	float: right;
 	height: 50px;
 	width: 250px;
 	font-size: 80%;
 	position: relative;
 	margin-left: 10px;
-	padding-left: 60px;
-	border-left: 1px solid #C8CED0;
+	margin-top: 10px;
+	padding-left: 0px;  /* 60px; */
+	/* border-left: 1px solid #C8CED0; */
 }
 
 .navbar > .container .navbar-brand,
@@ -157,6 +169,7 @@ p a {
 
 .navbar-default .navbar-link:hover {
 	color: #013631;
+	text-decoration: none !important;
 }
 
 .navbar-default .navbar-nav > li > a:focus,
@@ -329,27 +342,8 @@ nav[data-toggle='toc'] .nav .nav > .active:focus > a {
 
 /*----- COLORED LIST BULLET----*/
 
-.contents ul {
-  list-style: none; /* Remove default bullets */
-}
-
-.contents ul li::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--accent); /* Change the color */
-  font-weight: normal; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1.5em; /* Also needed for space (tweak if needed) */
-  margin-left: -1.5em; /* Also needed for space (tweak if needed) */
-}
-
-.contents ul > li > p {
-  display: inline; /* to have content show up next to bullet */
-  line-height: 1.6em;
-}
-
-.contents ul > li { /*to add back in space between bullet items that I took away by making p display inline */
-  margin-top: 1em;
-  margin-bottom: 1em;
+li::marker {
+  color: var(--accent);
 }
 
 /* from original source docs */
@@ -423,18 +417,7 @@ a.thumbnail:hover {
 	border-color: #FEDB00;
 }
 
-.label {
-	display: inline;
-	padding: .2em .6em .3em;
-	font-size: 75%;
-	font-weight: 700;
-	line-height: 1;
-	color: #fff;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: baseline;
-	border-radius: .25em;
-}
+
 
 /* tweak headroom.js to not disappear as aggressively at the top of the page */
 .headroom {
