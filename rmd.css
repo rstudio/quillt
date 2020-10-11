@@ -116,6 +116,7 @@ p a {
 	font-family: "Work Sans", sans-serif;
 }
 
+.label-default,
 .label-danger {
 	background-color: var(--a-alpha);
 }
@@ -423,4 +424,8 @@ a.thumbnail:hover {
 .headroom {
   will-change: transform;
   transition: transform 400ms ease;
+}
+
+.page-header {
+	padding-bottom: 0px;
 }
