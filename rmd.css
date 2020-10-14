@@ -343,7 +343,7 @@ nav[data-toggle='toc'] .nav .nav > .active:focus > a {
 
 /*----- COLORED LIST BULLET----*/
 
-li::marker {
+ul > li::marker {
   color: var(--accent);
 }
 
