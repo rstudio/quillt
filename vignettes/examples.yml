@@ -1,6 +1,6 @@
 - title: "NBA scoring with d3heatmap"
   img: images/htmlwidgets-d3heatmap.png
-  href: https://beta.rstudioconnect.com/jjallaire/htmlwidgets-ggplotly-geoms/
+  href: https://beta.rstudioconnect.com/jjallaire/htmlwidgets-d3heatmap/
   showcase: true
 - title: "ggplotly: ggplot2 geoms"
   img: images/plotly.png
