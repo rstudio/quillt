@@ -22,5 +22,6 @@ URL: https://github.com/apreshill/quillt, https://apreshill.github.io/quillt
 BugReports: https://github.com/apreshill/quillt/issues
 Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.2),
+    withr (>= 2.3.0)
 Config/testthat/edition: 3

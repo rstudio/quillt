@@ -46,9 +46,9 @@ thumbnails <- function(thumbs) {
     addRow(first, last)
   }
 
-  # check for leftovers
+  # check for leftovers (if numbThumbs < 3, one row is enough)
   leftover <- numThumbs %% 3
-  if (leftover > 0) {
+  if (numThumbs > 3 && leftover > 0) {
     last <- numThumbs
     first <- last - leftover + 1
     addRow(first, last)
