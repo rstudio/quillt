@@ -48,7 +48,8 @@
 
 
 <meta property="og:title" content="Generate HTML for examples — examples" />
-<meta property="og:description" content="Generate HTML for examples" />
+<meta property="og:description" content="Used typically in quillt website, this will read a YAML file containing
+the expecting information and build the HTML to be included in the examples.Rmd vignette." />
 <meta property="og:image" content="https://apreshill.github.io/quillt/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -124,7 +125,7 @@
 </li>
 <li>
   <a href="https://github.com/apreshill/quillt">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -147,7 +148,8 @@
     </div>
 
     <div class="ref-description">
-    <p>Generate HTML for examples</p>
+    <p>Used typically in <strong>quillt</strong> website, this will read a YAML file containing
+the expecting information and build the HTML to be included in the <code>examples.Rmd</code> vignette.</p>
     </div>
 
     <pre class="usage"><span class='fu'>examples</span><span class='op'>(</span>
@@ -157,7 +159,37 @@
   shinyOnly <span class='op'>=</span> <span class='cn'>FALSE</span>
 <span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>yml</th>
+      <td><p>Path to the YAML file.</p></td>
+    </tr>
+    <tr>
+      <th>caption</th>
+      <td><p>if <code>FALSE</code>, the title won't be shown as caption below the image.</p></td>
+    </tr>
+    <tr>
+      <th>showcaseOnly</th>
+      <td><p>if <code>TRUE</code>, only the element with <code>showcase: TRUE</code> in YAML will be shown.</p></td>
+    </tr>
+    <tr>
+      <th>shinyOnly</th>
+      <td><p>if <code>TRUE</code>, only the element with <code>shiny: TRUE</code> in YAML will be shown.</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="yaml-structure"><a class="anchor" href="#yaml-structure"></a>YAML structure</h2>
+
+    <p>The YAML should be following this example<div class="yaml"></p><pre>- title: title to use as tooltip and caption # mandatory
+  href: link to use when the image or caption is clicked # mandatory
+  img: link to the image to use in thumbnail # mandatory
+  source: link to the source repo to link to from the caption # optional
+  showcase: set to FALSE if you want to filter out # optional
+  shiny: set to TRUE if shiny example # optional
+</pre><p></div></p>
+<p>See existing pkgdown website using <strong>quillt</strong> for examples</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -170,7 +202,7 @@
 
       <footer>
       <div class="tidyverse">
-  <p>quillt is a built for <strong>R Markdown</strong>, an ecosystem of packages for creating computational documents in R. Learn more at <a href="https://rmarkdown.rstudio.com">rmarkdown.rstudio.com</a>.</p>
+  <p>quillt is built for <strong>R Markdown</strong>, an ecosystem of packages for creating computational documents in R. Learn more at <a href="https://rmarkdown.rstudio.com">rmarkdown.rstudio.com</a>.</p>
 </div>
 
 <div class="author">
