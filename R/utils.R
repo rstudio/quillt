@@ -1,18 +1,30 @@
 #' Generate HTML for a 4-wide bootstrap thumbnail
 #'
+#' @param title Used as title for the link tooltip and as caption is `caption = TRUE`.
+#' @param img link to the image to use in the thumbnail.
+#' @param href link to use when the image is clicked.
+#' @param caption if `FALSE`, only the image will be shown without a caption below.
+#' @param source link to a source repository. if `caption = TRUE`, will be added
+#'   as a clickable link of the form `(Source)`
+#'
 #' @export
-thumbnail <- function(title, img, href, caption = TRUE) {
+thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
   htmltools::div(class = "col-sm-4",
     htmltools::a(class = "thumbnail", title = title, href = href,
         htmltools::img(src = img),
         htmltools::div(class = ifelse(caption, "caption", ""),
-            ifelse(caption, title, "")
+            ifelse(caption, title, ""),
+            if (caption && !is.null(source)) {
+              htmltools::a(class = "source", href = source, "(Source)")
+            }
         )
       )
   )
 }
 
 #' Generate HTML for several rows of 3-wide bootstrap thumbnails
+#'
+#' @param thumbs A list of thumbnail HTML components, usually built with `thumbnail()`
 #'
 #' @export
 thumbnails <- function(thumbs) {
@@ -49,6 +61,29 @@ thumbnails <- function(thumbs) {
 
 #' Generate HTML for examples
 #'
+#' Used typically in **quillt** website, this will read a YAML file containing
+#' the expecting information and build the HTML to be included in the `examples.Rmd` vignette.
+#'
+#' # YAML structure
+#'
+#' The YAML should be following this example
+#'
+#' ```yaml
+#' - title: title to use as tooltip and caption # mandatory
+#'   href: link to use when the image or caption is clicked # mandatory
+#'   img: link to the image to use in thumbnail # mandatory
+#'   source: link to the source repo to link to from the caption # optional
+#'   showcase: set to FALSE if you want to filter out # optional
+#'   shiny: set to TRUE if shiny example # optional
+#' ```
+#'
+#' See existing pkgdown website using **quillt** for examples
+#'
+#' @param yml Path to the YAML file.
+#' @param caption if `FALSE`, the title won't be shown as caption below the image.
+#' @param showcaseOnly if `TRUE`, only the element with `showcase: TRUE` in YAML will be shown.
+#' @param shinyOnly if `TRUE`, only the element with `shiny: TRUE` in YAML will be shown.
+#'
 #' @export
 examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE, shinyOnly = FALSE) {
 
@@ -66,13 +101,16 @@ examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE,
   examples <- apply(examples, 1, function(r) {
     list(title = r["title"],
          img = r["img"],
-         href = r["href"])
+         href = r["href"],
+         source = if(is.na(r["source"])) NULL else r["source"]
+    )
   })
 
   thumbnails(lapply(examples, function(x) {
     thumbnail(title = x$title,
               img = x$img,
               href = x$href,
+              source = x$source,
               caption = caption)
   }))
 }

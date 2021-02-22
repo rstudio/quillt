@@ -2,10 +2,13 @@
 % Please edit documentation in R/utils.R
 \name{thumbnails}
 \alias{thumbnails}
-\title{Generate HTML for several rows of 4-wide bootstrap thumbnails}
+\title{Generate HTML for several rows of 3-wide bootstrap thumbnails}
 \usage{
 thumbnails(thumbs)
 }
+\arguments{
+\item{thumbs}{A list of thumbnail HTML components, usually built with \code{thumbnail()}}
+}
 \description{
-Generate HTML for several rows of 4-wide bootstrap thumbnails
+Generate HTML for several rows of 3-wide bootstrap thumbnails
 }

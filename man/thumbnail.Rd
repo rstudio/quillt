@@ -2,85 +2,22 @@
 % Please edit documentation in R/utils.R
 \name{thumbnail}
 \alias{thumbnail}
-\title{Test function}
+\title{Generate HTML for a 4-wide bootstrap thumbnail}
 \usage{
-thumbnail(title, img, href, caption = TRUE)
+thumbnail(title, img, href, caption = TRUE, source = NULL)
+}
+\arguments{
+\item{title}{Used as title for the link tooltip and as caption is \code{caption = TRUE}.}
+
+\item{img}{link to the image to use in the thumbnail.}
+
+\item{href}{link to use when the image is clicked.}
+
+\item{caption}{if \code{FALSE}, only the image will be shown without a caption below.}
+
+\item{source}{link to a source repository. if \code{caption = TRUE}, will be added
+as a clickable link of the form \code{(Source)}}
 }
 \description{
-Test function
-}
-\section{Heading 1}{
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-\subsection{Heading 2a}{
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-est laborum.
-}
-
-\subsection{Heading 2b}{
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt
-dui ut ornare lectus. In est ante in nibh. Eu sem integer vitae justo eget.
-Massa placerat duis ultricies lacus sed turpis. Etiam sit amet nisl purus
-in mollis nunc sed id. Porta non pulvinar neque laoreet suspendisse interdum
-consectetur. Risus at ultrices mi tempus imperdiet nulla malesuada
-pellentesque.
-
 Generate HTML for a 4-wide bootstrap thumbnail
 }
-}
-
