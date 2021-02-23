@@ -38,7 +38,7 @@ jobs:
           pak::pkg_system_requirements("pkgdown", execute = TRUE)
         shell: Rscript {0}
 
-     - name: Install package and dependencies
+      - name: Install package and dependencies
         run: |
           pak::local_install_dev_deps(upgrade = TRUE)
           pak::pkg_install("r-lib/pkgdown")
