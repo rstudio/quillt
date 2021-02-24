@@ -4,7 +4,7 @@ pkgdown_sha: 8bb9cef2f58d6c6ceec351d2f96497af6cef485b
 articles:
   examples: examples.html
   quillt: quillt.html
-last_built: 2021-02-24T12:37Z
+last_built: 2021-02-24T16:14Z
 urls:
   reference: https://apreshill.github.io/quillt/reference
   article: https://apreshill.github.io/quillt/articles
