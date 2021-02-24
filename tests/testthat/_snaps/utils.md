@@ -32,7 +32,13 @@
           <img src="path/to/img"/>
           <div class="caption">
             title
-            <a class="source" href="repo.org/source">(Source)</a>
+            <object>
+              <span style="float:right;">
+                (
+                <a class="source-repo" href="repo.org/source">Source</a>
+                )
+              </span>
+            </object>
           </div>
         </a>
       </div>
@@ -106,7 +112,13 @@
             <img src="path/to/img"/>
             <div class="caption">
               title
-              <a class="source" href="repo.org/source">(Source)</a>
+              <object>
+                <span style="float:right;">
+                  (
+                  <a class="source-repo" href="repo.org/source">Source</a>
+                  )
+                </span>
+              </object>
             </div>
           </a>
         </div>
@@ -135,7 +147,13 @@
             <img src="path/to/img"/>
             <div class="caption">
               title
-              <a class="source" href="repo.org/source">(Source)</a>
+              <object>
+                <span style="float:right;">
+                  (
+                  <a class="source-repo" href="repo.org/source">Source</a>
+                  )
+                </span>
+              </object>
             </div>
           </a>
         </div>

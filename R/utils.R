@@ -15,7 +15,14 @@ thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
         htmltools::div(class = ifelse(caption, "caption", ""),
             ifelse(caption, title, ""),
             if (caption && !is.null(source)) {
-              htmltools::a(class = "source", href = source, "(Source)")
+              htmltools::tags$object(
+                htmltools::span(
+                  style = "float:right;",
+                  "(",
+                  htmltools::a(class = "source-repo", href = source, "Source"),
+                  ")"
+                )
+              )
             }
         )
       )
@@ -102,7 +109,7 @@ examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE,
     list(title = r["title"],
          img = r["img"],
          href = r["href"],
-         source = if(is.na(r["source"])) NULL else r["source"]
+         source = if (is.na(r["source"])) NULL else r["source"]
     )
   })
 
