@@ -15,7 +15,9 @@ thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
         htmltools::div(class = ifelse(caption, "caption", ""),
             ifelse(caption, title, ""),
             if (caption && !is.null(source)) {
-              htmltools::a(class = "source", href = source, "(Source)")
+              htmltools::tags$object(
+                htmltools::a(class = "source-repo", href = source, "(Source)")
+              )
             }
         )
       )
@@ -29,7 +31,7 @@ thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
 #' @export
 thumbnails <- function(thumbs) {
 
-  # capture arguments and setup rows to return
+  #living since capture arguments and setup rows to return
   numThumbs <- length(thumbs)
   fullRows <- numThumbs / 3
   rows <- htmltools::tagList()
@@ -102,7 +104,7 @@ examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE,
     list(title = r["title"],
          img = r["img"],
          href = r["href"],
-         source = if(is.na(r["source"])) NULL else r["source"]
+         source = if (is.na(r["source"])) NULL else r["source"]
     )
   })
 
