@@ -33,11 +33,7 @@
           <div class="caption">
             title
             <object>
-              <span style="float:right;">
-                (
-                <a class="source-repo" href="repo.org/source">Source</a>
-                )
-              </span>
+              <a class="source-repo" href="repo.org/source">(Source)</a>
             </object>
           </div>
         </a>
@@ -113,11 +109,7 @@
             <div class="caption">
               title
               <object>
-                <span style="float:right;">
-                  (
-                  <a class="source-repo" href="repo.org/source">Source</a>
-                  )
-                </span>
+                <a class="source-repo" href="repo.org/source">(Source)</a>
               </object>
             </div>
           </a>
@@ -148,11 +140,7 @@
             <div class="caption">
               title
               <object>
-                <span style="float:right;">
-                  (
-                  <a class="source-repo" href="repo.org/source">Source</a>
-                  )
-                </span>
+                <a class="source-repo" href="repo.org/source">(Source)</a>
               </object>
             </div>
           </a>

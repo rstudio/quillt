@@ -16,12 +16,7 @@ thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
             ifelse(caption, title, ""),
             if (caption && !is.null(source)) {
               htmltools::tags$object(
-                htmltools::span(
-                  style = "float:right;",
-                  "(",
-                  htmltools::a(class = "source-repo", href = source, "Source"),
-                  ")"
-                )
+                htmltools::a(class = "source-repo", href = source, "(Source)")
               )
             }
         )
@@ -36,7 +31,7 @@ thumbnail <- function(title, img, href, caption = TRUE, source = NULL) {
 #' @export
 thumbnails <- function(thumbs) {
 
-  # capture arguments and setup rows to return
+  #living since capture arguments and setup rows to return
   numThumbs <- length(thumbs)
   fullRows <- numThumbs / 3
   rows <- htmltools::tagList()
