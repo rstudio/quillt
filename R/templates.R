@@ -11,6 +11,11 @@
 #' + `use_contributing`: Add a _CONTRIBUTING.md_ file in `.github/` following a
 #' template in **quillt**. Inspired by `usethis::use_tidy_contributing()`.
 #'
+#' + `use_github_action_quillt_pkgdown`: Set a Github Action workflow to build a
+#' pkgdown website and deploy to Netlify. The deployment action use allow a main
+#' deploy branch and PR previews. This action will be triggered on PR only for
+#' branch targetting master and with a name starting with `pkgdown/`
+#'
 #' @name setup-helpers
 NULL
 
@@ -30,5 +35,18 @@ use_contributing <- function() {
   usethis::use_template("CONTRIBUTING.md",
                         file.path(".github", "CONTRIBUTING.md"),
                         data = data, package = "quillt")
+}
+
+#' @export
+#' @rdname setup-helpers
+use_github_action_quillt_pkgdown <- function(main_branch = "master") {
+  check_install("usethis")
+  usethis:::use_dot_github()
+  template <- usethis:::find_template("pkgdown.yaml", package = "quillt")
+  usethis::use_github_action("pkgdown.yaml", template, basename(template), ignore = TRUE, open = FALSE)
+  usethis::ui_todo("Set Github Secrets for Netlify deployment:")
+  usethis::ui_line("   - NETLIFY_AUTH_TOKEN")
+  usethis::ui_line("   - NETLIFY_SITE_ID")
+  usethis::ui_todo("Check deployment action configuration")
 }
 
