@@ -24,5 +24,8 @@ BugReports: https://github.com/rstudio/quillt/issues
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat (>= 3.0.2),
-    withr (>= 2.3.0)
+    withr (>= 2.3.0),
+    usethis (>= 2.0.1.9000)
 Config/testthat/edition: 3
+Remotes:
+    r-lib/usethis
