@@ -5,8 +5,11 @@
 #'
 #' @details
 #'
-#' * `use_coc()`: use `usethis::use_tidy_coc()` and put _CODE\_OF\_CONDUCT.md in
-#' `.github/` directory setting the contact email to rstudio's one.
+#' + `use_coc()`: use `usethis::use_tidy_coc()` and put _CODE\_OF\_CONDUCT.md_ in
+#' `.github/` directory setting the contact email to Rstudio one.
+#'
+#' + `use_contributing`: Add a _CONTRIBUTING.md_ file in `.github/` following a
+#' template in **quillt**. Inspired by `usethis::use_tidy_contributing()`.
 #'
 #' @name setup-helpers
 NULL
@@ -18,4 +21,14 @@ use_coc <- function() {
   usethis::use_tidy_coc()
 }
 
+#' @export
+#' @rdname setup-helpers
+use_contributing <- function() {
+  check_install("usethis")
+  usethis:::use_dot_github()
+  data <- list(Package = usethis:::project_name())
+  usethis::use_template("CONTRIBUTING.md",
+                        file.path(".github", "CONTRIBUTING.md"),
+                        data = data, package = "quillt")
+}
 
