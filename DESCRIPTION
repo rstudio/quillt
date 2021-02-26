@@ -18,8 +18,8 @@ Imports:
     htmltools,
     yaml,
     plyr
-URL: https://github.com/apreshill/quillt, https://apreshill.github.io/quillt
-BugReports: https://github.com/apreshill/quillt/issues
+URL: https://github.com/rstudio/quillt, https://rstudio.github.io/quillt
+BugReports: https://github.com/rstudio/quillt/issues
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat (>= 3.0.2),
