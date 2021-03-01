@@ -22,14 +22,14 @@ NULL
 #' @export
 #' @rdname setup-helpers
 use_coc <- function() {
-  check_install("usethis")
+  check_installed("usethis")
   usethis::use_tidy_coc()
 }
 
 #' @export
 #' @rdname setup-helpers
 use_contributing <- function() {
-  check_install("usethis")
+  check_installed("usethis")
   usethis:::use_dot_github()
   data <- list(Package = usethis:::project_name())
   usethis::use_template("CONTRIBUTING.md",
@@ -40,7 +40,7 @@ use_contributing <- function() {
 #' @export
 #' @rdname setup-helpers
 use_github_action_quillt_pkgdown <- function(main_branch = "master") {
-  check_install("usethis")
+  check_installed("usethis")
   usethis:::use_dot_github()
   template <- usethis:::find_template("pkgdown-gha.yaml", package = "quillt")
   usethis::use_github_action(url = template, save_as = "pkgdown.yaml", ignore = TRUE, open = FALSE)

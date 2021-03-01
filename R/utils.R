@@ -1,4 +1,4 @@
-check_install <- function(pkgs) {
+check_installed <- function(pkgs) {
     inst <- vapply(pkgs, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))
     if (all(inst)) {
       return()
