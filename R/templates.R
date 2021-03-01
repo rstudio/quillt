@@ -89,7 +89,7 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   # Add vignette used as Get Started.
   usethis::ui_info("Adding package named vignette for Get Started section.")
   use_template("vignette-intro.Rmd",
-               file.path(articles_dir, paste0(data$Package, ".Rmd")),
+               file.path("vignettes", paste0(data$Package, ".Rmd")),
                data = data, ignore = FALSE, open = FALSE)
 
 }
