@@ -83,7 +83,7 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
                file.path(articles_dir, "examples.Rmd"),
                data = data, ignore = FALSE, open = FALSE)
   use_template("articles-examples.yaml",
-               file.path(articles_dir, "examples.yaml"),
+               file.path(articles_dir, "examples.yml"),
                data = list(), ignore = FALSE, open = FALSE)
 
   # Add vignette used as Get Started.
