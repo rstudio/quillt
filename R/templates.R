@@ -78,7 +78,7 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   usethis::use_build_ignore(articles_dir)
 
   # Add example article
-  usethis::ui_info("Adding articles for Examples section.")
+  usethis::ui_info("Adding article for Examples section.")
   use_template("articles-examples.Rmd",
                file.path(articles_dir, "examples.Rmd"),
                data = data, ignore = FALSE, open = FALSE)
