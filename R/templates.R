@@ -56,7 +56,7 @@ use_github_action_quillt_pkgdown <- function(main_branch = "master") {
 #' @param destdir Target directory for pkgdown docs. By default, it will be in
 #'   `reference` sub directory for R Markdown related package using **quillt**.
 #' @rdname setup-helpers
-use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
+use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   check_installed("usethis")
   usethis::ui_info("Creating assets for using quillt templated pkgdown website.")
   # Create destdir if it does not exist
@@ -106,7 +106,6 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   usethis::ui_todo("Add learning resources to  {usethis::ui_field(intro_rmd)} for the Get Started section.")
   usethis::ui_todo("Add github action workflow with {usethis::ui_code('quillt::use_github_action_quillt_pkgdown()')}")
 }
-
 
 use_template <- function(...) {
   usethis::use_template(..., package = "quillt")
