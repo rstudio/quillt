@@ -83,15 +83,24 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
                file.path(articles_dir, "examples.Rmd"),
                data = data, ignore = FALSE, open = FALSE)
   use_template("articles-examples.yaml",
-               file.path(articles_dir, "examples.yml"),
+               yml_ex <- file.path(articles_dir, "examples.yml"),
                data = list(), ignore = FALSE, open = FALSE)
 
   # Add vignette used as Get Started.
   usethis::ui_info("Adding package named vignette for Get Started section.")
   use_template("vignette-intro.Rmd",
-               file.path("vignettes", paste0(data$Package, ".Rmd")),
+               intro_rmd <- file.path("vignettes", paste0(data$Package, ".Rmd")),
                data = data, ignore = FALSE, open = FALSE)
 
+  # TODOS
+  usethis::ui_info("What is left to be done ?")
+  usethis::ui_todo("Add a logo in { usethis::ui_field('man/figures/logo.png') }. \\
+                   with { usethis::ui_code('usethis::use_logo()')}.")
+  usethis::ui_todo("Check and adapt configuration in { usethis::ui_field(config_file)}.")
+  usethis::ui_todo("Check and adapt configuration in { usethis::ui_field(config_file)}.")
+  usethis::ui_todo("Add examples to { usethis::ui_field(yml_ex) } for the Examples section.")
+  usethis::ui_todo("Add learning resources to  { usethis::ui_field(intro_rmd) } for the Get Started section.")
+  usethis::ui_todo("Add github action workflow with { usethis::ui_code('quillt::use_github_action_quillt_pkgdown') }")
 }
 
 
