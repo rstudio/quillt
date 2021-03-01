@@ -32,9 +32,9 @@ use_contributing <- function() {
   check_installed("usethis")
   usethis:::use_dot_github()
   data <- list(Package = usethis:::project_name())
-  usethis::use_template("CONTRIBUTING.md",
-                        file.path(".github", "CONTRIBUTING.md"),
-                        data = data, package = "quillt")
+  use_template("CONTRIBUTING.md",
+               file.path(".github", "CONTRIBUTING.md"),
+               data = data)
 }
 
 #' @export
@@ -54,5 +54,8 @@ use_github_action_quillt_pkgdown <- function(main_branch = "master") {
 #' @rdname setup-helpers
 use_pkgdown <- function() {
   check_install("usethis")
+}
 
+use_template <- function(...) {
+  usethis::use_template(..., package = "quillt")
 }
