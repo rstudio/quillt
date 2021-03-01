@@ -94,13 +94,12 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
 
   # TODOS
   usethis::ui_info("What is left to be done ?")
-  usethis::ui_todo("Add a logo in { usethis::ui_field('man/figures/logo.png') }. \\
-                   with { usethis::ui_code('usethis::use_logo()')}.")
-  usethis::ui_todo("Check and adapt configuration in { usethis::ui_field(config_file)}.")
-  usethis::ui_todo("Check and adapt configuration in { usethis::ui_field(config_file)}.")
-  usethis::ui_todo("Add examples to { usethis::ui_field(yml_ex) } for the Examples section.")
-  usethis::ui_todo("Add learning resources to  { usethis::ui_field(intro_rmd) } for the Get Started section.")
-  usethis::ui_todo("Add github action workflow with { usethis::ui_code('quillt::use_github_action_quillt_pkgdown') }")
+  usethis::ui_todo("Add a logo in {usethis::ui_field('man/figures/logo.png')}. \\
+                   with {usethis::ui_code('usethis::use_logo()')}.")
+  usethis::ui_todo("Check and adapt configuration in {usethis::ui_field(config_file)}.")
+  usethis::ui_todo("Add examples to {usethis::ui_field(yml_ex) } for the Examples article")
+  usethis::ui_todo("Add learning resources to  {usethis::ui_field(intro_rmd)} for the Get Started section.")
+  usethis::ui_todo("Add github action workflow with {usethis::ui_code('quillt::use_github_action_quillt_pkgdown()')}")
 }
 
 
