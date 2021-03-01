@@ -5,7 +5,7 @@
 \alias{use_coc}
 \alias{use_contributing}
 \alias{use_github_action_quillt_pkgdown}
-\alias{use_pkgdown}
+\alias{use_quillt_pkgdown}
 \title{Helpers for project setup with quillt}
 \usage{
 use_coc()
@@ -14,7 +14,7 @@ use_contributing()
 
 use_github_action_quillt_pkgdown(main_branch = "master")
 
-use_pkgdown(config_file = "_pkgdown.yml", destdir = "reference")
+use_quillt_pkgdown(config_file = "_pkgdown.yml", destdir = "reference")
 }
 \arguments{
 \item{config_file}{Path to the pkgdown yaml config file - could be set to be
