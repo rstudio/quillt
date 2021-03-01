@@ -51,10 +51,44 @@ use_github_action_quillt_pkgdown <- function(main_branch = "master") {
 }
 
 #' @export
+#' @param config_file Path to the pkgdown yaml config file - could be set to be
+#'   `pkgdown/` subfolder.
+#' @param destdir Target directory for pkgdown docs. By default, it will be in
+#'   `reference` sub directory for R Markdown related package using **quillt**.
 #' @rdname setup-helpers
-use_pkgdown <- function() {
-  check_install("usethis")
+use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
+  check_installed("usethis")
+  # Create destdir if it does not exist
+  usethis::use_directory(destdir)
+
+  # Add pkgdown config to use with quillt
+  data <- list(Package = usethis:::project_name(),
+               destdir = destdir,
+               github_url = usethis:::github_url())
+  use_template("pkgdown-config.yaml", "_pkgdown.yml", data = data)
+  usethis::use_build_ignore(c(config_file, destdir, "pkgdown"))
+  usethis::use_git_ignore(destdir)
+
+  # Add folder for articles
+  articles_dir <- "vignettes/articles"
+  usethis::use_directory(articles_dir)
+  usethis::use_build_ignore(articles_dir)
+
+  # Add example article
+  use_template("articles-examples.Rmd",
+               file.path(articles_dir, "examples.Rmd"),
+               data = data, ignore = FALSE, open = FALSE)
+  use_template("articles-examples.yaml",
+               file.path(articles_dir, "examples.yaml"),
+               data = list(), ignore = FALSE, open = FALSE)
+
+  # Add vignette used as Get Started.
+  use_template("vignette-intro.Rmd",
+               file.path(articles_dir, paste0(data$Package, ".Rmd")),
+               data = data, ignore = FALSE, open = FALSE)
+
 }
+
 
 use_template <- function(...) {
   usethis::use_template(..., package = "quillt")
