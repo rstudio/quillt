@@ -58,10 +58,12 @@ use_github_action_quillt_pkgdown <- function(main_branch = "master") {
 #' @rdname setup-helpers
 use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   check_installed("usethis")
+  usethis::ui_info("Creating assets for using quillt templated pkgdown website.")
   # Create destdir if it does not exist
   usethis::use_directory(destdir)
 
   # Add pkgdown config to use with quillt
+  usethis::ui_info("Adding pkgdown config for quillt-like project.")
   data <- list(Package = usethis:::project_name(),
                destdir = destdir,
                github_url = usethis:::github_url())
@@ -70,11 +72,13 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   usethis::use_git_ignore(destdir)
 
   # Add folder for articles
+  usethis::ui_info("Adding articles subdir in 'vignettes/' folder.")
   articles_dir <- "vignettes/articles"
   usethis::use_directory(articles_dir)
   usethis::use_build_ignore(articles_dir)
 
   # Add example article
+  usethis::ui_info("Adding articles for Examples section.")
   use_template("articles-examples.Rmd",
                file.path(articles_dir, "examples.Rmd"),
                data = data, ignore = FALSE, open = FALSE)
@@ -83,6 +87,7 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
                data = list(), ignore = FALSE, open = FALSE)
 
   # Add vignette used as Get Started.
+  usethis::ui_info("Adding package named vignette for Get Started section.")
   use_template("vignette-intro.Rmd",
                file.path(articles_dir, paste0(data$Package, ".Rmd")),
                data = data, ignore = FALSE, open = FALSE)
