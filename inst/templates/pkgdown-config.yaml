@@ -1,6 +1,6 @@
 destination: {{ destdir }}
 
-# website will be reference on https://pkgs.rstudio.com/
+# website will be referenced on https://pkgs.rstudio.com/
 # Open a PR in https://github.com/rstudio/pkgs.rstudio.com
 url: https://pkgs.rstudio.com/{{{ Package }}}/
 
