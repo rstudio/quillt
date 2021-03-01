@@ -92,6 +92,11 @@ use_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
                intro_rmd <- file.path("vignettes", paste0(data$Package, ".Rmd")),
                data = data, ignore = FALSE, open = FALSE)
 
+  # Add Code Of Conduct and Contributing
+  usethis::ui_info("Adding more assets if missing")
+  use_coc()
+  use_contributing()
+
   # TODOS
   usethis::ui_info("What is left to be done ?")
   usethis::ui_todo("Add a logo in {usethis::ui_field('man/figures/logo.png')}. \\
