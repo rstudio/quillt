@@ -39,12 +39,12 @@ use_contributing <- function() {
 
 #' @export
 #' @rdname setup-helpers
-use_github_action_quillt_pkgdown <- function(main_branch = "master") {
+use_github_action_quillt_pkgdown <- function() {
   check_installed("usethis")
   usethis:::use_dot_github()
   template <- usethis:::find_template("pkgdown-gha.yaml", package = "quillt")
   usethis::use_github_action(url = template, save_as = "pkgdown.yaml", ignore = TRUE, open = FALSE)
-  usethis::ui_todo("Check deployment action configuration.")
+  usethis::ui_todo("Check deployment action configuration, specifically main deploy branch.")
   usethis::ui_todo("Set Github Secrets for Netlify deployment:")
   usethis::ui_line("   - NETLIFY_AUTH_TOKEN")
   usethis::ui_line("   - NETLIFY_SITE_ID")
