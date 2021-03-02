@@ -12,7 +12,7 @@ use_coc()
 
 use_contributing()
 
-use_github_action_quillt_pkgdown(main_branch = "master")
+use_github_action_quillt_pkgdown()
 
 use_quillt_pkgdown(config_file = "_pkgdown.yml", destdir = "reference")
 }
