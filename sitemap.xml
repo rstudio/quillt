@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://apreshill.github.io/quillt/index.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/index.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt/reference/examples.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/reference/examples.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt/reference/thumbnail.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/reference/thumbnail.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt/reference/thumbnails.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/reference/thumbnails.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt/articles/examples.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/articles/examples.html</loc>
   </url>
   <url>
-    <loc>https://apreshill.github.io/quillt/articles/quillt.html</loc>
+    <loc>https://pkgs.rstudio.com/quillt/articles/quillt.html</loc>
   </url>
 </urlset>
