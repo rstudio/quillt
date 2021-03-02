@@ -46,7 +46,7 @@ template:
     footer: ...
 ```
 
-To work properly, `quillt` requires the css files in 
+To work properly, quillt requires the css files in 
 `inst/pkgdown/assets/`. Because of this, you should not set 
 `default_assets: false` in your `_pkgdown.yaml`. 
 
