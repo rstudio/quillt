@@ -1,10 +1,10 @@
 pandoc: 2.7.3
 pkgdown: 1.6.1.9000
-pkgdown_sha: 8bb9cef2f58d6c6ceec351d2f96497af6cef485b
+pkgdown_sha: 9c95f00d2505ddd83c4722e019202370715d3a3d
 articles:
   examples: examples.html
   quillt: quillt.html
-last_built: 2021-02-24T16:14Z
+last_built: 2021-03-02T10:18Z
 urls:
   reference: https://apreshill.github.io/quillt/reference
   article: https://apreshill.github.io/quillt/articles
