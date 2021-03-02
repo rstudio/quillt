@@ -23,4 +23,4 @@ navbar:
   - text: News
     href: news/index.html
   - icon: fab fa-github fa-lg
-    href: https://github.com/apreshill/quillt
+    href: https://github.com/rstudio/quillt
