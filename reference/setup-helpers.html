@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generate HTML for examples — examples • quillt</title>
+<title>Helpers for project setup with quillt — setup-helpers • quillt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -47,9 +47,9 @@
 
 
 
-<meta property="og:title" content="Generate HTML for examples — examples" />
-<meta property="og:description" content="Used typically in quillt website, this will read a YAML file containing
-the expecting information and build the HTML to be included in the examples.Rmd vignette." />
+<meta property="og:title" content="Helpers for project setup with quillt — setup-helpers" />
+<meta property="og:description" content="These helper are mostly inspired by the one in usethis from the tidyverse
+team and are useful to setup a new pkgdown project with quillt" />
 <meta property="og:image" content="https://pkgs.rstudio.com/quillt/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -148,54 +148,53 @@ the expecting information and build the HTML to be included in the examples.Rmd 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Generate HTML for examples</h1>
-    <small class="dont-index">Source: <a href='https://github.com/rstudio/quillt/blob/master/R/thumbnails.R'><code>R/thumbnails.R</code></a></small>
-    <div class="hidden name"><code>examples.Rd</code></div>
+    <h1>Helpers for project setup with quillt</h1>
+    <small class="dont-index">Source: <a href='https://github.com/rstudio/quillt/blob/master/R/templates.R'><code>R/templates.R</code></a></small>
+    <div class="hidden name"><code>setup-helpers.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Used typically in <strong>quillt</strong> website, this will read a YAML file containing
-the expecting information and build the HTML to be included in the <code>examples.Rmd</code> vignette.</p>
+    <p>These helper are mostly inspired by the one in <strong>usethis</strong> from the tidyverse
+team and are useful to setup a new pkgdown project with <strong>quillt</strong></p>
     </div>
 
-    <pre class="usage"><span class='fu'>examples</span><span class='op'>(</span>
-  yml <span class='op'>=</span> <span class='st'>"examples.yml"</span>,
-  caption <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  showcaseOnly <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  shinyOnly <span class='op'>=</span> <span class='cn'>FALSE</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>use_coc</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'>use_contributing</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'>use_github_action_quillt_pkgdown</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'>use_quillt_pkgdown</span><span class='op'>(</span>config_file <span class='op'>=</span> <span class='st'>"_pkgdown.yml"</span>, destdir <span class='op'>=</span> <span class='st'>"reference"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>yml</th>
-      <td><p>Path to the YAML file.</p></td>
+      <th>config_file</th>
+      <td><p>Path to the pkgdown yaml config file - could be set to be
+<code>pkgdown/</code> subfolder.</p></td>
     </tr>
     <tr>
-      <th>caption</th>
-      <td><p>if <code>FALSE</code>, the title won't be shown as caption below the image.</p></td>
-    </tr>
-    <tr>
-      <th>showcaseOnly</th>
-      <td><p>if <code>TRUE</code>, only the element with <code>showcase: TRUE</code> in YAML will be shown.</p></td>
-    </tr>
-    <tr>
-      <th>shinyOnly</th>
-      <td><p>if <code>TRUE</code>, only the element with <code>shiny: TRUE</code> in YAML will be shown.</p></td>
+      <th>destdir</th>
+      <td><p>Target directory for pkgdown docs. By default, it will be in
+<code>reference</code> sub directory for R Markdown related package using <strong>quillt</strong>.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="yaml-structure"><a class="anchor" href="#yaml-structure"></a>YAML structure</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The YAML should be following this example<div class="yaml"></p><pre>- title: title to use as tooltip and caption # mandatory
-  href: link to use when the image or caption is clicked # mandatory
-  img: link to the image to use in thumbnail # mandatory
-  source: link to the source repo to link to from the caption # optional
-  showcase: set to FALSE if you want to filter out # optional
-  shiny: set to TRUE if shiny example # optional
-</pre><p></div></p>
-<p>See existing pkgdown website using <strong>quillt</strong> for examples</p>
+    
+<ul>
+<li><p><code>use_coc()</code>: use <code><a href='https://usethis.r-lib.org/reference/tidyverse.html'>usethis::use_tidy_coc()</a></code> and put _CODE\_OF\emphCONDUCT.md in
+<code>.github/</code> directory setting the contact email to Rstudio one.</p></li>
+<li><p><code>use_contributing</code>: Add a <em>CONTRIBUTING.md</em> file in <code>.github/</code> following a
+template in <strong>quillt</strong>. Inspired by <code><a href='https://usethis.r-lib.org/reference/tidyverse.html'>usethis::use_tidy_contributing()</a></code>.</p></li>
+<li><p><code>use_github_action_quillt_pkgdown</code>: Set a Github Action workflow to build a
+pkgdown website and deploy to Netlify. The deployment action use allow a main
+deploy branch and PR previews. This action will be triggered on PR only for
+branch targetting master and with a name starting with <code>pkgdown/</code></p></li>
+</ul>
+
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
