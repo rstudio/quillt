@@ -25,13 +25,4 @@
   fns.forEach(function(el) {
     usageH2.parentElement.insertBefore(el, usageH2);
   });
-
-  // Redraw Toc
-  if (typeof window.Toc !== "undefined") {
-    document.getElementById('toc').removeChild(document.querySelector('#toc .nav'))
-    $('nav[data-toggle="toc"]').each(function(i, el) {
-      var $nav = $(el);
-      Toc.init($nav);
-    });
-  }
 })();</script>{{/relocateFunctions}}{{/yaml}}
