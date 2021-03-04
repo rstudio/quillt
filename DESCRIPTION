@@ -6,6 +6,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-8082-1890")),
     person("Desirée", "De Leon", role = "aut",
            comment = c(ORCID = "0000-0003-2217-9067")),
+    person("Christophe", "Dervieux", role = c("ctb"), comment = c(ORCID = "0000-0003-4474-2498")),
     person("RStudio", role = "cph")
   )
 Description: quillt is a pkgdown template for packages built for the R Markdown ecosystem. 
@@ -23,5 +24,8 @@ BugReports: https://github.com/rstudio/quillt/issues
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat (>= 3.0.2),
-    withr (>= 2.3.0)
+    withr (>= 2.3.0),
+    usethis (>= 2.0.1.9000)
 Config/testthat/edition: 3
+Remotes:
+    r-lib/usethis
