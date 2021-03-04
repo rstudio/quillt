@@ -19,7 +19,7 @@ Imports:
     htmltools,
     yaml,
     plyr
-URL: https://github.com/rstudio/quillt, https://rstudio.github.io/quillt
+URL: https://github.com/rstudio/quillt, https://pkgs.rstudio.com/quillt
 BugReports: https://github.com/rstudio/quillt/issues
 Roxygen: list(markdown = TRUE)
 Suggests: 

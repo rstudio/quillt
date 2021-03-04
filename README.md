@@ -41,7 +41,7 @@ template:
     footer: ...
 ```
 
-To work properly, `quillt` requires the css files in
+To work properly, quillt requires the css files in
 `inst/pkgdown/assets/`. Because of this, you should not set
 `default_assets: false` in your `_pkgdown.yaml`.
 
@@ -56,11 +56,11 @@ template:
 
 Three CSS files play a role in styling the site:
 
-  - `tidyverse.css` is generated from files in `scss/` written by Robby
+-   `tidyverse.css` is generated from files in `scss/` written by Robby
     Shaver. Generally you should not touch these files; Robby is the
     owner. If needed you can regenerate `tidyverse.css` by running this
     code:
-    
+
     ``` r
     # devtools::install_github("rstudio/sass")
     library(sass)
@@ -71,7 +71,7 @@ Three CSS files play a role in styling the site:
     )
     ```
 
-  - `pkgdown.css` comes from pkgdown.
+-   `pkgdown.css` comes from pkgdown.
 
 ## Lorem Ipsum
 
