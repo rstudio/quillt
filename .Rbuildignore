@@ -9,3 +9,5 @@
 ^\.sass-cache$
 ^\.github$
 ^vignettes
+^reference$
+^vignettes/articles$
