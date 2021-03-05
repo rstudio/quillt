@@ -1,4 +1,5 @@
-{{#yaml}}{{#relocateFunctions}}<script type="application/javascript">
+{{#yaml.relocate_functions}}<!-- quillt: Move Functions section above Usage -->
+<script type="application/javascript">
 (function() {
   if (!document.querySelector('.template-reference-topic')) {
     return;
@@ -25,4 +26,4 @@
   fns.forEach(function(el) {
     usageH2.parentElement.insertBefore(el, usageH2);
   });
-})();</script>{{/relocateFunctions}}{{/yaml}}
+})();</script>{{/yaml.relocate_functions}}
