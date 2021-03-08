@@ -2,7 +2,7 @@
 title: "Learn quillt"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Learn 
+  %\VignetteIndexEntry{Learn quillt}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
