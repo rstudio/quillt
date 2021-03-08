@@ -1,49 +1,59 @@
 ---
-title: "Dashboard basics"
-resource_files:
-  - snippets
+title: "Learn quillt"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Learn quillt}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
-## Components
+## Overview
 
-You can use flexdashboard to publish groups of related data visualizations as a dashboard. A flexdashboard can either be static (a standard web page) or dynamic (a [Shiny](http://shiny.rstudio.com) interactive document). A wide variety of components can be included in flexdashboard layouts, including:
+**quillt** is a template pkgdown package for the R Markdown Ecosystem. To learn more about
+template for pkgdown website see https://pkgdown.r-lib.org/reference/build_site.html#yaml-config-template
 
-1. Interactive JavaScript data visualizations based on [htmlwidgets](http://www.htmlwidgets.org).
+This template contains a theme and some assets dedicated to be used by R Markdown related pkgdown website. This vignettes aim to explain how to setup a new website using **quillt**
 
-2. R graphical output including base, lattice, and grid graphics.
+## How-to
 
-3. Tabular data (with optional sorting, filtering, and paging).
+**quillt** contains some usethis-like helper functions to quickly and easily setup a new website with the shared components and assets. This can also be used with existing website to migrate to quillt but you'll need to carefully look through the git diff.
 
-4. Value boxes for highlighting important summary data.
+* ` quillt::use_quillt_pkgdown()` is the main function that will set everything up. 
 
-5. Gauges for displaying values on a meter within a specified range.
+* `quillt::use_github_action_quillt_pkgdown()` is the companion function to setup a Github Action to deploy to website to netlify 
 
-6. Text annotations of various kinds.
+## Specification of a quillt website
 
-See the [dashboard components](using.html#components) documentation for additional details on the use of each component type.
-
-## Layout
-
-### Single Column (Fill)
-
-Dashboards are divided into columns and rows, with output components delineated using level 3 markdown headers (`###`). By default, dashboards are laid out within a single column, with charts  stacked vertically within a column and sized to fill available browser height. For example, this layout defines a single column with two charts that fills available browser space:
-
-<div class="row">
-
-<div class="col-md-5">
-<div id="singlecolumn"></div>
-<script type="text/javascript">loadSnippet('singlecolumn')</script>
-</div>
-
-<div class="col-md-7">
-<div height="420px" width="100%">
-<img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 1">
-<img class="holder" data-src="holder.js/100px210?size=28&amp;text=Chart 2">
-</div>
-</div>
-
-</div>
+* Uses the theme provided by **quillt**
+* Contains `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`
+* pkgdown website must share the same navbar configured in the template, i.e :
+    * Get Started
+    * Examples
+    * Articles
+    * References
+    * News
+    * Github Icon
+* `README.md` is used for homepage which contains at least the same header in order:
+    * Package Name + icon, then short description
+    * Featured documentation (like books, cheatsheets, ...)
+    * Installation steps (CRAN + Github)
+    * Usage (Quick intro)
+    * Getting help (link to Q&A website like RStudio Community or StackOverflow)
+    * Code Of Conduct (linking to the COC page)
+* Some component should not be change
+    * Footer message
+    * No additional navbar menu
+    * Homepage header with icon
+    * No other icon in navbar - Github should be the only one on the far right.
+    
+Aim is that a common look and feel is shared accross related packages.
 
 #### Testing h4 headers
 

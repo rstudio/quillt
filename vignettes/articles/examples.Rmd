@@ -1,0 +1,66 @@
+---
+title: "Example sites"
+resource_files:
+  - images/
+---
+
+```{r, include = FALSE, eval=FALSE}
+# To run to update the examples
+
+library(dplyr)
+library(purrr)
+library(rvest)
+
+pkgs <- tribble(
+   ~ pkgs,      ~ source,
+   "rmarkdown", "rstudio/rmarkdown",
+   "bookdown",  "rstudio/bookdown",
+   "blogdown",  "rstudio/blogdown") %>%
+  mutate(site = sprintf("https://pkgs.rstudio.com/%s", pkgs),
+         source = sprintf("https://github.com/%s", source))
+
+# get the title
+pkgs <- pkgs %>% 
+  mutate(
+    title = map_chr(site, ~{
+      read_html(.x) %>%
+        html_node("title") %>%
+        html_text()
+    }), 
+    title = stringr::str_trim(title)
+) 
+
+# for the screenshots below
+pkgs <- pkgs %>%
+  mutate(
+    img = xfun::with_ext(
+      paste("images", pkgs, sep = "/"), "png")
+  )
+
+# export to YAML
+pkgs %>%
+  rename(href = "site") %>%
+  mutate(showcase = TRUE) %>%
+  purrr::pmap(purrr::lift_ld(as.list)) %>%
+  yaml::write_yaml("examples.yml")
+```
+
+```{r, include = FALSE}
+# we use as few new dependencies as possible 
+pkgs <- rmarkdown:::yaml_load_file("examples.yml")
+pkgs <- do.call(rbind, lapply(pkgs, function(x) data.frame(site = x$href, img = x$img)))
+# remotes::install_github("rstudio/webshot2")
+img_exists <- file.exists(pkgs$img)
+if (!dir.exists("images")) dir.create("images")
+if (any(!img_exists)) {
+  res <- webshot2::webshot(pkgs$site[!img_exists], pkgs$img[!img_exists], cliprect = "viewport")
+  # optimize image - require optipng
+  webshot2::shrink(res)
+}
+```
+
+The examples below illustrate the use of **quillt** as a template for pkgdown website related to the R Markdown ecosystem. You can also find a list of other pkgdown website at <https://pkgs.rstudio.com/>
+
+```{r, echo=FALSE}
+quillt::examples(yml = "examples.yml")
+```

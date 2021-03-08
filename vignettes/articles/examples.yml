@@ -1,0 +1,18 @@
+- pkgs: rmarkdown
+  source: https://github.com/rstudio/rmarkdown
+  href: https://pkgs.rstudio.com/rmarkdown
+  title: Dynamic Documents for R • rmarkdown
+  img: images/rmarkdown.png
+  showcase: yes
+- pkgs: bookdown
+  source: https://github.com/rstudio/bookdown
+  href: https://pkgs.rstudio.com/bookdown
+  title: Authoring Books and Technical Documents with R Markdown • bookdown
+  img: images/bookdown.png
+  showcase: yes
+- pkgs: blogdown
+  source: https://github.com/rstudio/blogdown
+  href: https://pkgs.rstudio.com/blogdown
+  title: Create Blogs and Websites with R Markdown • blogdown
+  img: images/blogdown.png
+  showcase: yes
