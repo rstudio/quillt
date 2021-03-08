@@ -3,3 +3,7 @@
 export(examples)
 export(thumbnail)
 export(thumbnails)
+export(use_coc)
+export(use_contributing)
+export(use_github_action_quillt_pkgdown)
+export(use_quillt_pkgdown)
