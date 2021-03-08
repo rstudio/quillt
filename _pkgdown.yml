@@ -58,22 +58,17 @@ navbar:
         # - text: Version 0.2
         #   href: <url>
 
-# structure example
-# reference:
-# - title: Output formats
-#   desc: >
-#     These output formats are for building ...
-#   contents:
-#
-# - title: Previewing and rendering books
-#   contents:
-#
-# - title: Publishing
-#   desc: >
-#     Publish...
-#
-#
-# - title: Helper functions
-#   desc: >
-#     These functions are utility functions when working with **quillt**.
-#   contents:
+reference:
+- title: Examples gallery helpers
+  desc: >
+    These functions are useful helpers to create a gallery of showcased example
+  contents:
+  - examples
+  - thumbnail
+  - thumbnails
+
+- title: Setup a quillt template project
+  desc: >
+    These functions are usethis-like helpers to set up a pkgdown website with a quillt template
+  contents:
+  - starts_with("use")
