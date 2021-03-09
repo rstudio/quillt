@@ -12,8 +12,7 @@ name: pkgdown
 
 jobs:
   pkgdown:
-    # Uncomment below line to only build preview based on PR branch name
-    # if: ${{ github.event_name == 'push' || startsWith(github.head_ref, 'pkgdown/') }}
+    if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.fork == false }}
     runs-on: ubuntu-18.04
     env:
       RSPM: https://packagemanager.rstudio.com/cran/__linux__/bionic/latest
