@@ -297,10 +297,19 @@ nav[data-toggle='toc'] .nav > .active:focus > a,
 nav[data-toggle='toc'] ul > li > a:hover {
   border-left: 3px solid var(--accent);
   padding-left: 10px;
-  text-indent: -2px;
   letter-spacing: 1pt;
   font-size: 15px;
   text-decoration: none !important;
+}
+
+/* Increase space between list items, descrease within-item spacing */
+nav[data-toggle='toc'] .nav li {
+  margin-top: 0.5em;
+  line-height: 1.5;
+}
+
+nav[data-toggle='toc'] > ul > li:first-child {
+  margin-top: 0;
 }
 
 nav[data-toggle='toc'] .nav > li > a:hover,
@@ -315,7 +324,6 @@ nav[data-toggle='toc'] .nav > li > a:focus {
 nav[data-toggle='toc'] ul > li > a {
   border-left: 3px solid #FFFFFF;
   padding-left: 10px;
-  text-indent: -2px;
   letter-spacing: 1pt;
   font-size: 15px;
   text-decoration: none !important;
