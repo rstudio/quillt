@@ -1,0 +1,16 @@
+---
+title: "test-style"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This articles allows to check the style of some content.
+
+# About function `quillt::examples()`
+
+The text in the header above should be the same size
