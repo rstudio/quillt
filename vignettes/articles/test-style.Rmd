@@ -9,8 +9,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-This articles allows to check the style of some content.
+This articles allows to check the style of some content. Below are several block of test separated by an horizontal line
 
-# About function `quillt::examples()`
+---
 
-The text in the header above should be the same size
+```{r, results = 'asis', echo = FALSE}
+headers <- Reduce(paste0, rep("#", 6), accumulate = TRUE)
+headers <- paste(headers, "About function `quillt::examples()`")
+for(x in headers) {
+  src <- knitr::knit_expand(text = "{{x}}\n\nThe text in the header above should all be the same size and color differences\n\n")
+  cat(src)
+}
+```
+
+---
+

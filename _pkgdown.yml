@@ -39,7 +39,8 @@ navbar:
     articles:
       text: Articles
       menu:
-        - text: "No Article"
+        - text: Testing quillt style
+          href: articles/articles/test-style.html
     reference:
       text: Reference
       href: reference/index.html
