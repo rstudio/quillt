@@ -25,7 +25,8 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat (>= 3.0.2),
     withr (>= 2.3.0),
-    usethis (>= 2.0.1.9000)
+    usethis (>= 2.0.1.9000),
+    rmarkdown
 Config/testthat/edition: 3
 Remotes:
     r-lib/usethis
