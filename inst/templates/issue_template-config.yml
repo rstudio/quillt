@@ -1,0 +1,20 @@
+blank_issues_enabled: {{ blank_issue }}
+{{#links}}
+contact_links:
+{{/links}}
+{{#issue}}
+  - name: Issue guide
+    url: {{{ issue.url }}}
+    about: First time here or need a refresh ? Please consult the issue guide before posting.
+{{/issue}}
+{{#community}}
+  - name: Ask a question on RStudio Community
+    url: {{{community.url}}}
+    about: Please ask and answer questions here.
+{{/community}}
+{{#so}}
+  - name: Ask a question on Stack Overflow
+    url: {{{so.url}}}
+    about: Please ask and answer questions here.
+{{/so}}
+
