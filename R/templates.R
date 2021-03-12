@@ -145,6 +145,10 @@ use_quillt_issue_template <- function(issue_guide = TRUE, community = TRUE, so =
   use_template("issue_template-bug-report.md",
                file.path(".github", "ISSUE_TEMPLATE", "bug-report.md"),
                data = data)
+
+  use_template("issue_template-feature-request.md",
+               file.path(".github", "ISSUE_TEMPLATE", "feature-request.md")
+  )
 }
 
 use_template <- function(...) {
