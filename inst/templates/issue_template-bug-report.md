@@ -7,7 +7,7 @@ assignees: ''
 ---
 
 <!--
-Welcome to the blogdown GitHub repo 👋
+Welcome to the blogdown GitHub repo !
 
 We are always welcome to hear feedback from our users. 
 
@@ -24,7 +24,7 @@ When filing a _bug report_, please check the boxes below to confirm that you hav
 
 - [ ] included a minimal, self-contained, and reproducible example?
 
-- [ ] pasted the output from `xfun::session_info('{{Package}}')` in your issue?
+- [ ] pasted the output from `xfun::session_info('{{ Package }}')` in your issue?
 
 - [ ] upgraded all your packages to their latest versions (including your versions of R, the RStudio IDE, and relevant R packages)?
 
