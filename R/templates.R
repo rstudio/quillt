@@ -150,4 +150,6 @@ use_quillt_github_labels <- function(delete_default = TRUE) {
     descriptions = description,
     delete_default = delete_default
   )
+  # open label page
+  usethis:::view_url(usethis:::github_url(NULL), "labels")
 }
