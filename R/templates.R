@@ -11,10 +11,14 @@
 #' + `use_contributing`: Add a _CONTRIBUTING.md_ file in `.github/` following a
 #' template in **quillt**. Inspired by `usethis::use_tidy_contributing()`.
 #'
-#' + `use_github_action_quillt_pkgdown`: Set a Github Action workflow to build a
+#' + `use_github_action_quillt_pkgdown()`: Set a Github Action workflow to build a
 #' pkgdown website and deploy to Netlify. The deployment action use allow a main
 #' deploy branch and PR previews. This action will be triggered on PR only for
 #' branch targetting master and with a name starting with `pkgdown/`
+#'
+#' + `use_quillt_issue_template()`: Add default issue templates for Github
+#' issues. See [Github
+#' Docs](https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser)
 #'
 #' @name setup-helpers
 NULL
@@ -105,6 +109,46 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
   usethis::ui_todo("Add examples to {usethis::ui_field(yml_ex) } for the Examples article")
   usethis::ui_todo("Add learning resources to  {usethis::ui_field(intro_rmd)} for the Get Started section.")
   usethis::ui_todo("Add github action workflow with {usethis::ui_code('quillt::use_github_action_quillt_pkgdown()')}")
+}
+
+#' @export
+#' @param issue_guide default `TRUE` will add a link to
+#'   `https://yihui.org/issue/`. You can pass a custom link as character vector.
+#'   Set to `FALSE` to not include this option in the issue chooser.
+#' @param community default `TRUE` will add a link to
+#'   `https://community.rstudio.com/`. You can pass a custom link as character
+#'   vector. Set to `FALSE` to not include this option in the issue chooser.
+#' @param so default `TRUE` will add a link to
+#'   `https://stackoverflow.com/questions/tagged/r`. You can pass a custom link
+#'   as character vector. Set to `FALSE` to not include this option in the issue
+#'   chooser.
+#' @param blank_issue `FALSE` by default. Sets to `TRUE` to allow blank issue with no template.
+#' @rdname setup-helpers
+use_quillt_issue_template <- function(issue_guide = TRUE, community = TRUE, so = TRUE, blank_issue = FALSE) {
+  usethis:::use_dot_github()
+  usethis::use_directory(file.path(".github", "ISSUE_TEMPLATE"))
+  # Github issue chooser
+  community <- if(community) "https://community.rstudio.com/" else ""
+  so <- if (so) "https://stackoverflow.com/questions/tagged/r" else ""
+  issue_guide <- if (issue_guide) "https://yihui.org/issue/" else ""
+  links <- nzchar(issue_guide) || nzchar(community) || nzchar(so)
+  data <- list(links       = links,
+               community   = list(url = community),
+               so          = list(url = so),
+               issue       = list(url = issue_guide),
+               blank_issue = tolower(as.character(blank_issue)))
+  use_template("issue_template-config.yml",
+               file.path(".github", "ISSUE_TEMPLATE", "config.yml"),
+               data = data)
+
+  data <- list(Package = usethis:::project_name())
+  use_template("issue_template-bug-report.md",
+               file.path(".github", "ISSUE_TEMPLATE", "bug-report.md"),
+               data = data)
+
+  use_template("issue_template-feature-request.md",
+               file.path(".github", "ISSUE_TEMPLATE", "feature-request.md")
+  )
 }
 
 use_template <- function(...) {
