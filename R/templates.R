@@ -110,3 +110,46 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
 use_template <- function(...) {
   usethis::use_template(..., package = "quillt")
 }
+
+#' Manage Github issue labels
+#'
+#' This function can create new labels, update colors and description, and optionally delete default Github labels.
+#' `use_quillt_github_labels()` is similar with `usethis::use_tidy_labels()`
+#' with the following differences:
+#' + It will not rename `questions` to `reprex` but keep both.
+#' + Add a few labels : `RStudio IDE`, `pandoc` and `knitr` used to label issue regarding upstream tools
+#'
+#' @param delete_default. `TRUE` (default) will delete default GH labels not in use with any issue.
+#' @export
+use_quillt_github_labels <- function(delete_default = TRUE) {
+  check_installed("usethis")
+  add_labels <- c(
+    question      = "FBCA04",
+    `RStudio IDE` = "F0CCFF",
+    pandoc        = "C2E0C6",
+    knitr         = "D4C5F9"
+  )
+  add_desc <- c(
+    question      = "general questions - not an issue",
+    `RStudio IDE` = "concerns the rstudio ide",
+    pandoc        = "concerns upstream pandoc",
+    knitr         = "concerns knitr package"
+  )
+  labels <- union(usethis::tidy_labels(), names(add_labels))
+  # do not rename question to reprex
+  tidy_labels <- usethis::tidy_labels_rename()
+  rename <- tidy_labels[names(tidy_labels) != "question"]
+  duplicated <- names(usethis::tidy_label_colours()) %in% names(add_labels)
+  colors <- c(usethis::tidy_label_colours()[!duplicated], add_labels)
+  description <- c(usethis::tidy_label_descriptions(), add_desc)
+
+  usethis::use_github_labels(
+    labels = labels,
+    rename = rename,
+    colours = colors,
+    descriptions = description,
+    delete_default = delete_default
+  )
+  # open label page
+  usethis:::view_url(usethis:::github_url(NULL), "labels")
+}
