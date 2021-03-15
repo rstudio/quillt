@@ -5,7 +5,7 @@ contact_links:
 {{#issue}}
   - name: Issue guide
     url: {{{ issue.url }}}
-    about: First time here or need a refresh ? Please consult the issue guide before posting.
+    about: First time here or need a refresh? Please consult the issue guide before posting.
 {{/issue}}
 {{#community}}
   - name: Ask a question on RStudio Community
@@ -17,4 +17,3 @@ contact_links:
     url: {{{so.url}}}
     about: Please ask and answer questions here.
 {{/so}}
-

@@ -1,6 +1,6 @@
 ---
 name: "Feature request"
-about: Suggest an idea  for this package and share experience
+about: Suggest an idea for this package
 title: '[FR]'
 labels: ''
 assignees: ''

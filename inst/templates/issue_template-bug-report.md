@@ -1,6 +1,6 @@
 ---
-name: "Open an issue in this repo"
-about: Give us feedback about your issues or unclear documentation
+name: "Bug report"
+about: Report an error or unexpected behavior you saw while using this package
 title: ''
 labels: ''
 assignees: ''
