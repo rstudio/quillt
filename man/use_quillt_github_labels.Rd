@@ -14,6 +14,7 @@ This function can create new labels, update colors and description, and optional
 \code{use_quillt_github_labels()} is similar with \code{usethis::use_tidy_labels()}
 with the following differences:
 \itemize{
-\item It will not rename \code{questions} to \code{reprex} but keep both
+\item It will not rename \code{questions} to \code{reprex} but keep both.
+\item Add a few labels : \verb{RStudio IDE}, \code{pandoc} and \code{knitr} used to label issue regarding upstream tools
 }
 }
