@@ -196,6 +196,8 @@ use_quillt_github_labels <- function(delete_default = TRUE) {
     descriptions = description,
     delete_default = delete_default
   )
+  usethis::ui_done("Issues labels are up to date")
+  usethis::ui_info("Opening issue labels page")
   # open label page
   usethis:::view_url(usethis:::github_url(NULL), "labels")
 }
