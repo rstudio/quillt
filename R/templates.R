@@ -172,7 +172,7 @@ use_quillt_github_labels <- function(delete_default = TRUE) {
     `RStudio IDE` = "F0CCFF",
     pandoc        = "C2E0C6",
     knitr         = "D4C5F9",
-    `next`        = "C2C1C1"
+    `next`        = "680F01"
   )
   add_desc <- c(
     question      = "general questions - not an issue",
