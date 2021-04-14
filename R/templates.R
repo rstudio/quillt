@@ -170,7 +170,7 @@ use_template <- function(...) {
 #'     + For tracking upstream related issues : `RStudio IDE`, `pandoc` and `knitr`
 #'     + For R Markdown team organization like `next` for issues to consider for next releases.
 #'
-#' # Labels sets by this function
+#' # Labels set by this function
 #'
 #' ```{r, echo = FALSE}
 #' labels <- all_labels()

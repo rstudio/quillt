@@ -22,7 +22,7 @@ with the following differences:
 }
 }
 }
-\section{Labels sets by this function}{
+\section{Labels set by this function}{
 \tabular{ll}{
    \strong{labels} \tab \strong{description} \cr
    breaking change :skull_and_crossbones: \tab an unexpected problem or unintended behavior \cr
