@@ -7,7 +7,7 @@ assignees: ''
 ---
 
 <!--
-Welcome to the blogdown GitHub repo !
+Welcome to the {{ Package }} GitHub repo !
 
 We are always welcome to hear feedback from our users. 
 
