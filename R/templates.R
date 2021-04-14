@@ -177,14 +177,16 @@ use_quillt_github_labels <- function(delete_default = TRUE) {
     `RStudio IDE` = "F0CCFF",
     pandoc        = "C2E0C6",
     knitr         = "D4C5F9",
-    `next`        = "680F01"
+    `next`        = "680F01",
+    duplicate     = "E6E6E6"
   )
   add_desc <- c(
     question      = "general questions - not an issue",
     `RStudio IDE` = "concerns the rstudio ide",
     pandoc        = "concerns upstream pandoc",
     knitr         = "concerns knitr package",
-    `next`        = "to consider for next release"
+    `next`        = "to consider for next release",
+    duplicate     = "already another issue about this"
   )
   labels <- union(usethis::tidy_labels(), names(add_labels))
   # do not rename question to reprex
