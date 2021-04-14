@@ -9,7 +9,7 @@ assignees: ''
 <!--
 Welcome to the {{ Package }} GitHub repo !
 
-We are always welcome to hear feedback from our users. 
+We are always happy to hear feedback from our users. 
 
 To file a _bug report_, please follow these instructions carefully: <https://yihui.org/issue/#bug-reports>
 
