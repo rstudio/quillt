@@ -15,6 +15,33 @@ This function can create new labels, update colors and description, and optional
 with the following differences:
 \itemize{
 \item It will not rename \code{questions} to \code{reprex} but keep both.
-\item Add a few labels : \verb{RStudio IDE}, \code{pandoc} and \code{knitr} used to label issue regarding upstream tools
+\item Add a few labels :
+\itemize{
+\item For tracking upstream related issues : \verb{RStudio IDE}, \code{pandoc} and \code{knitr}
+\item For R Markdown team organization like \code{next} for issues to consider for next releases.
 }
 }
+}
+\section{Labels sets by this function}{
+\tabular{ll}{
+   \strong{labels} \tab \strong{description} \cr
+   breaking change :skull_and_crossbones: \tab an unexpected problem or unintended behavior \cr
+   bug \tab a feature request or enhancement \cr
+   documentation \tab needs a minimal reproducible example \cr
+   feature \tab  \cr
+   good first issue :heart: \tab good issue for first-time contributors \cr
+   help wanted :heart: \tab we'd love your help! \cr
+   reprex \tab API change likely to affect existing code \cr
+   tidy-dev-day :nerd_face: \tab Tidyverse Developer Day rstd.io/tidy-dev-day \cr
+   question \tab general questions - not an issue \cr
+   RStudio IDE \tab concerns the rstudio ide \cr
+   pandoc \tab concerns upstream pandoc \cr
+   knitr \tab concerns knitr package \cr
+   next \tab to consider for next release \cr
+   duplicate \tab already another issue about this \cr
+}
+
+
+\ifelse{html}{\out{<span style="color:red;">text</span>}}
+}
+

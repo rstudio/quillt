@@ -18,7 +18,8 @@ Imports:
     pkgdown (>= 1.1.0.9000),
     htmltools,
     yaml,
-    plyr
+    plyr,
+    tibble
 URL: https://github.com/rstudio/quillt, https://pkgs.rstudio.com/quillt
 BugReports: https://github.com/rstudio/quillt/issues
 Roxygen: list(markdown = TRUE)

@@ -166,11 +166,45 @@ use_template <- function(...) {
 #' `use_quillt_github_labels()` is similar with `usethis::use_tidy_labels()`
 #' with the following differences:
 #' + It will not rename `questions` to `reprex` but keep both.
-#' + Add a few labels : `RStudio IDE`, `pandoc` and `knitr` used to label issue regarding upstream tools
+#' + Add a few labels :
+#'     + For tracking upstream related issues : `RStudio IDE`, `pandoc` and `knitr`
+#'     + For R Markdown team organization like `next` for issues to consider for next releases.
+#'
+#' # Labels sets by this function
+#'
+#' ```{r, echo = FALSE}
+#' labels <- all_labels()
+#' labels$colors <- NULL
+#' names(labels) <- sprintf("**%s**", names(labels))
+#' knitr::kable(labels)
+#' ```
 #'
 #' @param delete_default. `TRUE` (default) will delete default GH labels not in use with any issue.
 #' @export
 use_quillt_github_labels <- function(delete_default = TRUE) {
+  check_installed("usethis")
+  # get labels table
+  labels <- all_labels()
+
+  # do not rename question to reprex
+  tidy_labels <- usethis::tidy_labels_rename()
+  rename <- tidy_labels[names(tidy_labels) != "question"]
+
+  usethis::use_github_labels(
+    labels = labels$labels,
+    rename = rename,
+    colours = labels$colors,
+    descriptions = labels$description,
+    delete_default = delete_default
+  )
+  usethis::ui_done("Issues labels are up to date")
+  usethis::ui_info("Opening issue labels page")
+  # open label page
+  usethis:::view_url(usethis:::github_url(NULL), "labels")
+}
+
+#' @importFrom tibble tibble
+all_labels <- function() {
   check_installed("usethis")
   add_labels <- c(
     question      = "FBCA04",
@@ -189,22 +223,17 @@ use_quillt_github_labels <- function(delete_default = TRUE) {
     duplicate     = "already another issue about this"
   )
   labels <- union(usethis::tidy_labels(), names(add_labels))
-  # do not rename question to reprex
-  tidy_labels <- usethis::tidy_labels_rename()
-  rename <- tidy_labels[names(tidy_labels) != "question"]
-  duplicated <- names(usethis::tidy_label_colours()) %in% names(add_labels)
-  colors <- c(usethis::tidy_label_colours()[!duplicated], add_labels)
-  description <- c(usethis::tidy_label_descriptions(), add_desc)
+  # remove unwanted labels
+  to_keep <- names(usethis::tidy_label_descriptions()) %in% labels
+  description <- c(usethis::tidy_label_descriptions()[to_keep], add_desc)
 
-  usethis::use_github_labels(
+  # set color overidding potential tidyverse choice
+  duplicated_col <- names(usethis::tidy_label_colours()) %in% names(add_labels)
+  colors <- c(usethis::tidy_label_colours()[!duplicated_col], add_labels)
+
+  tibble::tibble(
     labels = labels,
-    rename = rename,
-    colours = colors,
-    descriptions = description,
-    delete_default = delete_default
+    description = description,
+    colors = colors
   )
-  usethis::ui_done("Issues labels are up to date")
-  usethis::ui_info("Opening issue labels page")
-  # open label page
-  usethis:::view_url(usethis:::github_url(NULL), "labels")
 }
