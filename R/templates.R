@@ -147,8 +147,8 @@ use_quillt_issue_template <- function(issue_guide = TRUE, community = TRUE, so =
                data = data)
 
   use_template("issue_template-feature-request.md",
-               file.path(".github", "ISSUE_TEMPLATE", "feature-request.md")
-  )
+               file.path(".github", "ISSUE_TEMPLATE", "feature-request.md"),
+               data = data)
   old <- ".github/ISSUE_TEMPLATE.md"
   if (file.exists(old)) {
     usethis::ui_done("Deleting old issue template {usethis::ui_path(old)}")
