@@ -40,8 +40,5 @@ with the following differences:
    next \tab to consider for next release \cr
    duplicate \tab already another issue about this \cr
 }
-
-
-\ifelse{html}{\out{<span style="color:red;">text</span>}}
 }
 
