@@ -223,13 +223,15 @@ all_labels <- function() {
     duplicate     = "already another issue about this"
   )
   labels <- union(usethis::tidy_labels(), names(add_labels))
-  # remove unwanted labels
+  # remove unwanted labels from tidyverse ones
+  labels <- setdiff(labels, c("tidy-dev-day :nerd_face:"))
   to_keep <- names(usethis::tidy_label_descriptions()) %in% labels
   description <- c(usethis::tidy_label_descriptions()[to_keep], add_desc)
 
   # set color overidding potential tidyverse choice
   duplicated_col <- names(usethis::tidy_label_colours()) %in% names(add_labels)
-  colors <- c(usethis::tidy_label_colours()[!duplicated_col], add_labels)
+  to_keep <- names(usethis::tidy_label_colours()) %in% labels
+  colors <- c(usethis::tidy_label_colours()[to_keep & !duplicated_col], add_labels)
 
   tibble::tibble(
     labels = labels,

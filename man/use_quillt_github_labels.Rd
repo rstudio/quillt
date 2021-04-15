@@ -32,7 +32,6 @@ with the following differences:
    good first issue :heart: \tab good issue for first-time contributors \cr
    help wanted :heart: \tab we'd love your help! \cr
    reprex \tab API change likely to affect existing code \cr
-   tidy-dev-day :nerd_face: \tab Tidyverse Developer Day rstd.io/tidy-dev-day \cr
    question \tab general questions - not an issue \cr
    RStudio IDE \tab concerns the rstudio ide \cr
    pandoc \tab concerns upstream pandoc \cr
