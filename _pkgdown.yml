@@ -6,6 +6,7 @@ url: https://pkgs.rstudio.com/quillt/
 
 template:
   package: quillt
+  trailingslash_redirect: true
   opengraph:
     image:
       src: man/figures/logo.png
