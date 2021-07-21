@@ -63,8 +63,8 @@ jobs:
       - name: Cache some pkgdown assets
         uses: actions/cache@v2
         with:
-          path:
-            - 'vignettes/articles/images/*.png'
+          path: |
+            vignettes/articles/images/*.png
           key: 1-${{ hashFiles('vignettes/articles/examples.yml') }}
 
       - name: Build pkgdown site
