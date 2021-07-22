@@ -4,10 +4,12 @@
 \alias{thumbnails}
 \title{Generate HTML for several rows of 3-wide bootstrap thumbnails}
 \usage{
-thumbnails(thumbs)
+thumbnails(thumbs, ncol = 3)
 }
 \arguments{
 \item{thumbs}{A list of thumbnail HTML components, usually built with \code{thumbnail()}}
+
+\item{ncol}{Number of column for the grid : 3 (default) or 2.}
 }
 \description{
 Generate HTML for several rows of 3-wide bootstrap thumbnails

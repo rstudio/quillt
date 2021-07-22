@@ -27,8 +27,9 @@ with the following differences:
    \strong{labels} \tab \strong{description} \cr
    breaking change :skull_and_crossbones: \tab an unexpected problem or unintended behavior \cr
    bug \tab a feature request or enhancement \cr
-   documentation \tab needs a minimal reproducible example \cr
-   feature \tab  \cr
+   documentation \tab maintenance, infrastructure, and similar \cr
+   feature \tab needs a minimal reproducible example \cr
+   upkeep \tab  \cr
    good first issue :heart: \tab good issue for first-time contributors \cr
    help wanted :heart: \tab we'd love your help! \cr
    reprex \tab API change likely to affect existing code \cr
