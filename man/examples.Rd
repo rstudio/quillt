@@ -8,7 +8,8 @@ examples(
   yml = "examples.yml",
   caption = TRUE,
   showcaseOnly = FALSE,
-  shinyOnly = FALSE
+  shinyOnly = FALSE,
+  ncol = 3
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ examples(
 \item{showcaseOnly}{if \code{TRUE}, only the element with \code{showcase: TRUE} in YAML will be shown.}
 
 \item{shinyOnly}{if \code{TRUE}, only the element with \code{shiny: TRUE} in YAML will be shown.}
+
+\item{ncol}{Number of column for the grid : 3 (default) or 2.}
 }
 \description{
 Used typically in \strong{quillt} website, this will read a YAML file containing

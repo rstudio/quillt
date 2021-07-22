@@ -4,7 +4,7 @@
 \alias{thumbnail}
 \title{Generate HTML for a 4-wide bootstrap thumbnail}
 \usage{
-thumbnail(title, img, href, caption = TRUE, source = NULL)
+thumbnail(title, img, href, caption = TRUE, source = NULL, ncol = 3)
 }
 \arguments{
 \item{title}{Used as title for the link tooltip and as caption is \code{caption = TRUE}.}
@@ -17,6 +17,8 @@ thumbnail(title, img, href, caption = TRUE, source = NULL)
 
 \item{source}{link to a source repository. if \code{caption = TRUE}, will be added
 as a clickable link of the form \code{(Source)}}
+
+\item{ncol}{Number of column for the grid : 3 (default) or 2.}
 }
 \description{
 Generate HTML for a 4-wide bootstrap thumbnail

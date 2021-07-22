@@ -15,6 +15,16 @@ test_that("create thumbnails of 3 columns", {
   expect_snapshot(thumbnails(list(thumbs1, thumbs2, thumbs3, thumbs1)))
 })
 
+test_that("create thumbnails 2 columns", {
+  thumbs1 <- thumbnail("title", "path/to/img", "website.org", ncol = 2)
+  thumbs2 <- thumbnail("title", "path/to/img", "website.org", caption = FALSE, ncol = 2)
+  thumbs3 <- thumbnail("title", "path/to/img", "website.org", source = "repo.org/source", ncol = 2)
+  expect_snapshot(thumbnails(thumbs1, ncol = 2))
+  expect_snapshot(thumbnails(list(thumbs1, thumbs2), ncol = 2))
+  expect_snapshot(thumbnails(list(thumbs1, thumbs2, thumbs3), ncol = 2))
+  expect_snapshot(thumbnails(list(thumbs1, thumbs2, thumbs3, thumbs1), ncol = 2))
+})
+
 test_that("Specify examples in YAML", {
   yaml <- withr::local_tempfile(fileext = ".yml")
   cat2 <- function(..., file = yaml, append = TRUE) {

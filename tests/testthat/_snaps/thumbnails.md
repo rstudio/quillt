@@ -155,6 +155,114 @@
         </div>
       </div>
 
+# create thumbnails 2 columns
+
+    Code
+      thumbnails(thumbs1, ncol = 2)
+    Output
+      <div class="row">
+        div
+        col-sm-6
+      </div>
+      <div class="row">
+        <a class="thumbnail" title="title" href="website.org">
+          <img src="path/to/img"/>
+          <div class="caption">title</div>
+        </a>
+      </div>
+
+---
+
+    Code
+      thumbnails(list(thumbs1, thumbs2), ncol = 2)
+    Output
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">title</div>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class=""></div>
+          </a>
+        </div>
+      </div>
+
+---
+
+    Code
+      thumbnails(list(thumbs1, thumbs2, thumbs3), ncol = 2)
+    Output
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">title</div>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">
+              title
+              <object>
+                <a class="source-repo" href="repo.org/source">(Source)</a>
+              </object>
+            </div>
+          </a>
+        </div>
+      </div>
+
+---
+
+    Code
+      thumbnails(list(thumbs1, thumbs2, thumbs3, thumbs1), ncol = 2)
+    Output
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">title</div>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">
+              title
+              <object>
+                <a class="source-repo" href="repo.org/source">(Source)</a>
+              </object>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="thumbnail" title="title" href="website.org">
+            <img src="path/to/img"/>
+            <div class="caption">title</div>
+          </a>
+        </div>
+      </div>
+
 # Specify examples in YAML
 
     Code
