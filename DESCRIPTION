@@ -32,5 +32,5 @@ Suggests:
 Config/testthat/edition: 3
 Config/Needs/website: rstudio/webshot2
 Remotes:
-    r-lib/usethis
+    r-lib/usethis,
     r-lib/pkgdown
