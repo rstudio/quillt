@@ -1,10 +1,9 @@
+{{#footer}}
 <div class="tidyverse">
   <p>{{{yaml.footer}}}{{^yaml.footer}}{{#package}}{{name}}{{/package}} is built for <strong>R Markdown</strong>, an ecosystem of packages for creating computational documents in R. Learn more at <a href="https://rmarkdown.rstudio.com">rmarkdown.rstudio.com</a>.{{/yaml.footer}}</p>
 </div>
 
 <div class="author">
-  <p>
-    Developed by {{#package}}{{{authors}}}{{/package}}.
-    Site built with <a href="https://pkgdown.r-lib.org">pkgdown</a>.
-  </p>
+  <p>{{#right}}{{{.}}}{{/right}}</p>
 </div>
+{{/footer}}

@@ -1,0 +1,5 @@
+footer:
+  right:
+   structure: [authors, pkgdown]
+   components:
+     pkgdown: Site built with <a href="https://pkgdown.r-lib.org">pkgdown</a>.
