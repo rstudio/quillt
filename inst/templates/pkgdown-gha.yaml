@@ -23,7 +23,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
-          extra-packages: [pkgdown, quillt]
+          extra-packages: [r-lib/pkgdown, rstudio/quillt]
           # or use Config/needs/website: in DESCRIPTION
           # needs: website
 

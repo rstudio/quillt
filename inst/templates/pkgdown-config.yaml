@@ -6,6 +6,9 @@ url: https://pkgs.rstudio.com/{{{ Package }}}/
 
 template:
   package: quillt
+  # needed with pkgs.rstudio.com + this site on netlify
+  # NOTE: requires dev pkgdown
+  trailingslash_redirect: true # set to false in other cases
   opengraph:
     image:
       src: man/figures/logo.png
