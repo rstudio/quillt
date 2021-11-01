@@ -9,8 +9,6 @@ template:
   bootstrap: 5
   bslib:
     primary: "#096B72"
-    fg: "#444"
-    base_font: {google: {family: "Work Sans", wght: [400, 600], ital: [0, 1]}}
     navbar-background: "#e6f3fc"
 
   opengraph:
