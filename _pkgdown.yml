@@ -29,7 +29,6 @@ home:
 navbar:
   structure:
     left:  [intro, examples, articles, reference, news]
-    right: [github]
   components:
     examples:
       text: Examples
