@@ -25,6 +25,22 @@ home:
     # if relevant, set url to another website i.e https://rmarkdown.rstudio.com
     href: ""
 
+# structure of website themed with quillt
+navbar:
+  structure:
+    left:  [intro, examples, articles, reference, news]
+    right: [github]
+  components:
+    examples:
+      text: Examples
+      href: articles/articles/examples.html
+
+news:
+  releases:
+  - text: "No blog post"
+  # - text: Version 0.2
+  #   href: <url>
+
 reference:
 - title: Examples gallery helpers
   desc: >
