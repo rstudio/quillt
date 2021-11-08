@@ -93,6 +93,7 @@ thumbnails <- function(thumbs, ncol = 3) {
 #' @param shinyOnly if `TRUE`, only the element with `shiny: TRUE` in YAML will be shown.
 #' @param ncol Number of column for the grid : 3 (default) or 2.
 #'
+#' @describeIn examples Create the HTML for an Examples showcase page
 #' @export
 examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE, shinyOnly = FALSE, ncol = 3) {
 
@@ -125,6 +126,23 @@ examples <- function(yml = "examples.yml", caption = TRUE, showcaseOnly = FALSE,
               caption = caption,
               ncol = ncol)
   }), ncol = ncol)
+}
+
+#' @describeIn examples Produce `resource_files` YAML for images with relative
+#'   URLs in the examples YAML file
+#' @export
+template_examples_resource_files <- function(yml = "examples.yml") {
+  ex <- yaml::yaml.load_file(yml)
+  res <- lapply(ex, function(x) {
+    # collect image paths that are not http links or relative to pkgdown root
+    if (!grepl("^(https?:/)?/", x$img)) x$img
+  })
+  res <- res[vapply(res, Negate(is.null), logical(1))]
+  if (length(res)) {
+    cat(yaml::as.yaml(list(resource_files = res), indent = 2, indent.mapping.sequence = TRUE))
+  } else {
+    message("No internal images detected.")
+  }
 }
 
 check_ncol <- function(ncol) {
