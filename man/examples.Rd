@@ -2,6 +2,7 @@
 % Please edit documentation in R/thumbnails.R
 \name{examples}
 \alias{examples}
+\alias{template_examples_resource_files}
 \title{Generate HTML for examples}
 \usage{
 examples(
@@ -11,6 +12,8 @@ examples(
   shinyOnly = FALSE,
   ncol = 3
 )
+
+template_examples_resource_files(yml = "examples.yml")
 }
 \arguments{
 \item{yml}{Path to the YAML file.}
@@ -27,8 +30,16 @@ examples(
 Used typically in \strong{quillt} website, this will read a YAML file containing
 the expecting information and build the HTML to be included in the \code{examples.Rmd} vignette.
 }
+\section{Functions}{
+\itemize{
+\item \code{examples}: Create the HTML for an Examples showcase page
+
+\item \code{template_examples_resource_files}: Produce \code{resource_files} YAML for images with relative
+URLs in the examples YAML file
+}}
+
 \section{YAML structure}{
-The YAML should be following this example\if{html}{\out{<div class="yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
+The YAML should be following this example\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
   href: link to use when the image or caption is clicked # mandatory
   img: link to the image to use in thumbnail # mandatory
   source: link to the source repo to link to from the caption # optional
