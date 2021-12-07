@@ -17,7 +17,6 @@
 #' @param .overwrite Should it overwrite existing copy ? `TRUE` by default
 #'   assuming git tracking is used.
 #'
-#' @return
 #' @examples \dontrun{
 #' # do not need holder.js
 #' copy_assets(holder = FALSE)

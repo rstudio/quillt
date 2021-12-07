@@ -17,9 +17,6 @@ to add placeholder images.}
 \item{.overwrite}{Should it overwrite existing copy ? \code{TRUE} by default
 assuming git tracking is used.}
 }
-\value{
-
-}
 \description{
 This is a helper to retrieve locally some common resources accross pkgdown
 website. They will be copied from \code{quillt} package installation to
