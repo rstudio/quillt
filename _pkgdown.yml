@@ -10,7 +10,7 @@ template:
   bslib:
     primary: "#096B72"
     navbar-background: "#e6f3fc"
-  trailing_slash_redirect: true
+  trailingslash_redirect: true
   opengraph:
     image:
       src: man/figures/logo.png
@@ -20,12 +20,13 @@ template:
       card: summary
   includes:
     # custom resource for R Markdown ecosystem
-    # Use `quillt::copy_assets()` to copy them locally
+    # Remove if not needed - in that case remove also files in `pkgdown/assets`
     in_header: >
       <!-- javascript assets for rmarkdown -->
       <script src="ace-1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
       <script src="holder-2.9.0/holder.min.js" type="text/javascript" charset="utf-8"></script>
       <script src="snippets/snippets.js" type="text/javascript" charset="utf-8"></script>
+
 
 development:
   version_tooltip: "Development version"
@@ -47,7 +48,7 @@ footer:
         computational documents in R.<br>Learn more at
         [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/).
 
-# structure of website themed with quillt
+# structure of website themed for R Markdown ecosystem
 navbar:
   structure:
     left:  [intro, examples, articles, reference, news]
@@ -56,12 +57,9 @@ navbar:
       text: Examples
       href: articles/examples.html
 
+# Add articles menu using
 # https://pkgdown.r-lib.org/dev/reference/build_articles.html#index-and-navbar
-articles:
-- title: Testing
-  navbar: ~
-  contents:
-  - articles/test-style
+# aticles:
 
 news:
   releases:
@@ -69,23 +67,21 @@ news:
   # - text: Version 0.2
   #   href: <url>
 
-reference:
-- title: Examples gallery helpers
-  desc: >
-    These functions are useful helpers to create a gallery of showcased example
-  contents:
-  - examples
-  - thumbnail
-  - thumbnails
-
-- title: Setup a quillt template project
-  desc: >
-    These functions are usethis-like helpers to set up a pkgdown website with a quillt template
-  contents:
-  - starts_with("use")
-
-- title: Helpers
-  desc: >
-    These functions are useful for setting up pkgdown website for R Markdown ecosystem.
-  contents:
-  - copy_assets
+# structure example
+# reference:
+# - title: Output formats
+#   desc: >
+#     These output formats are for building ...
+#   contents:
+#
+# - title: Previewing and rendering books
+#   contents:
+#
+# - title: Publishing
+#   desc: >
+#     Publish...
+#
+# - title: Helper functions
+#   desc: >
+#     These functions are utility functions when working with **quillt**.
+#   contents:

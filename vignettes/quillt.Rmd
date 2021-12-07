@@ -1,8 +1,8 @@
 ---
-title: "Learn quillt"
+title: "Learn quillt "
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Learn quillt}
+  %\VignetteIndexEntry{Learn quillt }
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
