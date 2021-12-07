@@ -68,12 +68,18 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
 
   # Add pkgdown config to use with quillt
   usethis::ui_info("Adding pkgdown config for quillt-like project.")
-  data <- list(Package = usethis:::project_name(),
-               destdir = destdir,
-               github_url = usethis:::github_url())
+  data <- list(
+    Package = usethis:::project_name(),
+    destdir = destdir,
+    github_url = usethis:::github_url()
+  )
   use_template("pkgdown-config.yaml", "_pkgdown.yml", data = data)
   usethis::use_build_ignore(c(config_file, destdir, "pkgdown"))
   usethis::use_git_ignore(destdir)
+
+  # Add dependencies in DESCRIPTION
+  usethis::ui_info("Adding to {ui_field('Config/Needs/website')}")
+  usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
 
   # Add folder for articles
   usethis::ui_info("Adding articles subdir in 'vignettes/' folder.")
