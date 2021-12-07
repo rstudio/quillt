@@ -11,7 +11,6 @@ template:
     primary: "#096B72"
     navbar-background: "#e6f3fc"
   trailing_slash_redirect: true
-
   opengraph:
     image:
       src: man/figures/logo.png
@@ -19,6 +18,9 @@ template:
     twitter:
       creator: "@rstudio"
       card: summary
+
+development:
+  version_tooltip: "Development version"
 
 home:
   links:
