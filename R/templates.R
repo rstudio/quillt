@@ -86,7 +86,7 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
   copy_assets()
 
   # Add dependencies in DESCRIPTION
-  usethis::ui_info("Adding to {ui_field('Config/Needs/website')}")
+  usethis::ui_info("Adding to {usethis::ui_field('Config/Needs/website')}")
   usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
 
   # Add folder for articles
@@ -118,7 +118,7 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
   # TODOS
   usethis::ui_info("What is left to be done ?")
   usethis::ui_todo("Check and adapt configuration in {usethis::ui_field(config_file)}.")
-  usethis::ui_todo("Remove {usethis::ui_field('pkgdown/assets/')} and {usethis::ui_code('in_header')} if you don't need them.")
+  usethis::ui_todo("Remove {usethis::ui_code('in_header')} and associated {usethis::ui_field('pkgdown/assets/')} if you don't need them.")
   usethis::ui_todo("Add a logo in {usethis::ui_field('man/figures/logo.png')}. \\
                    with {usethis::ui_code('usethis::use_logo()')}.")
   usethis::ui_todo("Add examples to {usethis::ui_field(yml_ex) } for the Examples article")
