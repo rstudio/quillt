@@ -8,7 +8,7 @@ name: pkgdown
 
 jobs:
   pkgdown:
-    if: ${{ github.event_name == 'push' || startsWith(github.head_ref, 'pkgdown/') || startsWith(github.head_ref, 'tidytemplate') }}
+    if: ${{ github.event_name == 'push' || startsWith(github.head_ref, 'pkgdown/') }}
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
