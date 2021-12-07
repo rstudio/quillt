@@ -26,11 +26,8 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat (>= 3.0.2),
     withr (>= 2.3.0),
-    usethis (>= 2.0.1.9000),
+    usethis (>= 2.1.3),
     rmarkdown,
-    pkgdown (>= 1.6.1.9000)
+    pkgdown (>= 2.0.1)
 Config/testthat/edition: 3
-Config/Needs/website: rstudio/webshot2
-Remotes:
-    r-lib/usethis,
-    r-lib/pkgdown
+Config/Needs/website: pkgdown, rstudio/webshot2
