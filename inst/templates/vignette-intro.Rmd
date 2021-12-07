@@ -1,8 +1,8 @@
 ---
-title: "Learn {{{ Package }}}"
+title: "Learn {{{ Package }}} "
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Learn {{{ Package }}}}
+  %\VignetteIndexEntry{Learn {{{ Package }}} }
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
