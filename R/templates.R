@@ -85,6 +85,9 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
   # Copy JS assets
   copy_assets()
 
+  # Copy pkgdown template
+  copy_pkgdown_templates()
+
   # Add dependencies in DESCRIPTION
   usethis::ui_info("Adding to dependencies to {usethis::ui_field('Config/Needs/website')}")
   usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))

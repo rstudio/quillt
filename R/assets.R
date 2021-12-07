@@ -49,3 +49,17 @@ copy_assets <- function(snippets = TRUE, holder = TRUE, .overwrite = TRUE) {
   rlang::inform(c(v = "Resources copied locally."))
   return(invisible(TRUE))
 }
+
+#' Copy pkgdown template in local pkgdown website
+#'
+#' This is a helper to retrieve locally some specific template to tweak pkgdown
+#' website. They will be copied from `quillt` package installation to
+#' `pkgdown/templates` folder for [website customisation](https://pkgdown.r-lib.org/articles/customise.html#additional-html-and-files).
+#'
+#' @export
+copy_pkgdown_templates <- function() {
+  templates <- system.file("assets", "pkgdown", "templates", package = "quillt")
+  pkgdown_templates <- "pkgdown/templates"
+  fs::dir_create(pkgdown_templates)
+  fs::dir_copy(templates, pkgdown_templates, overwrite = .overwrite)
+}
