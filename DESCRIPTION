@@ -30,4 +30,4 @@ Suggests:
     rmarkdown,
     pkgdown (>= 2.0.1)
 Config/testthat/edition: 3
-Config/Needs/website: pkgdown, rstudio/webshot2
+Config/Needs/website: pkgdown, rstudio/webshot2, tidyverse/tidytemplate
