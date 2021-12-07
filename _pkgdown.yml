@@ -18,6 +18,14 @@ template:
     twitter:
       creator: "@rstudio"
       card: summary
+  includes:
+    # custom resource for R Markdown ecosystem
+    # Use `quillt::copy_assets()` to copy them locally
+    in_header: >
+      <!-- javascript assets for rmarkdown -->
+      <script src="ace-1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
+      <script src="holder-2.9.0/holder.min.js" type="text/javascript" charset="utf-8"></script>
+      <script src="snippets/snippets.js" type="text/javascript" charset="utf-8"></script>
 
 development:
   version_tooltip: "Development version"
@@ -63,3 +71,9 @@ reference:
     These functions are usethis-like helpers to set up a pkgdown website with a quillt template
   contents:
   - starts_with("use")
+
+- title: Helpers
+  desc: >
+    These functions are useful for setting up pkgdown website for R Markdown ecosystem.
+  contents:
+  - copy_assets

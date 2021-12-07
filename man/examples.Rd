@@ -28,7 +28,7 @@ Used typically in \strong{quillt} website, this will read a YAML file containing
 the expecting information and build the HTML to be included in the \code{examples.Rmd} vignette.
 }
 \section{YAML structure}{
-The YAML should be following this example\if{html}{\out{<div class="yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
+The YAML should be following this example\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
   href: link to use when the image or caption is clicked # mandatory
   img: link to the image to use in thumbnail # mandatory
   source: link to the source repo to link to from the caption # optional
