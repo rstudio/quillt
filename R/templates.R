@@ -86,7 +86,7 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
   copy_assets()
 
   # Add dependencies in DESCRIPTION
-  usethis::ui_info("Adding to {usethis::ui_field('Config/Needs/website')}")
+  usethis::ui_info("Adding to dependencies to {usethis::ui_field('Config/Needs/website')}")
   usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
 
   # Add folder for articles
