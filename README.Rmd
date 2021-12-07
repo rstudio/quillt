@@ -17,65 +17,40 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-quillt is a [pkgdown](https://pkgdown.r-lib.org) template for packages in the R Markdown ecosystem. The goal of quillt is to create a patchwork quilt of all the packages that R Markdown users benefit from. That means packages that help users extend R Markdown using new output formats and templates, or that build upon existing packages to improve the quality of life for R Markdown users. If you feel that your package fits, please feel free to use this template for your own package. 
+quillt is a package containing helpers functions and resources mainly useful for projects in the R Markdown ecosysteme, like creating [pkgdown](https://pkgdown.r-lib.org) website. Previously, it contained a **pkgdown** template for the R Markdown ecosystem, but now **tidytemplate** is used. 
 
-The theme is built on top of the [paper bootswatch theme](https://bootswatch.com/3/paper/).
+All those website are by default aimed to be made available through https://pkgs.rstudio.com/
 
-## Using quillt
+The goal of quillt is to create a patchwork quilt of all the packages that R Markdown users benefit from. That means packages that help users extend R Markdown using new output formats and templates, or that build upon existing packages to improve the quality of life for R Markdown users. 
 
-Make sure your `_pkgdown.yaml` contains:
+## Using themed website for R Markdown ecosystem 
 
-```yaml
-template:
-  package: quillt
+Use this function to creates the necessary files and configurations
 
-development:
-  mode: auto
-
-home:
-  strip_header: false
+```r
+quillt::use_quillt_pkgdown()
 ```
+This will leave you with so more steps described in a checklist. Also, some files may be created that you don't want and the checklist will remind you of what to check
 
-You can customise the "part of" in the header and the footer text.
+## Examples gallery helpers
 
-```yaml
-template:
-  package: quillt
-  params:
-    part_of: rmarkdown.io
-    footer: ...
-```
+**quillt** containes some function to help you build a gallery of examples from a yaml file. 
 
-To work properly, quillt requires the css files in 
-`inst/pkgdown/assets/`. Because of this, you should not set 
-`default_assets: false` in your `_pkgdown.yaml`. 
+See [Reference page](https://pkgs.rstudio.com/quillt/reference/index.html#section-examples-gallery-helpers) and [examples](articles/examples.html)
 
-```yaml
-template:
-  package: quillt
-  # Do not do this!
-  default_assets: false
-```
+## Ressources
 
-## CSS files
+**quillt** also contains some JS files useful across the website. They are locally copied when creating a new pkgdown website with `use_quillt_pkgdown()`.
 
-Three CSS files play a role in styling the site:
+You can remove thoses files and associated configuration if you don't need them. See `copy_assets()`.
 
-* `tidyverse.css` is generated from files in `scss/` written by Robby Shaver.
-   Generally you should not touch these files; Robby is the owner. If needed
-   you can regenerate `tidyverse.css` by running this code:
+## Github action template for pkgdown website deployment
 
-    ```{r, eval = FALSE}
-    # devtools::install_github("rstudio/sass")
-    library(sass)
-    sass(
-      sass_file("scss/tidyverse.scss"),
-      output = "inst/pkgdown/assets/tidyverse.css",
-      options = sass_options(output_style = "nested")
-    )
-    ```
+`use_github_action_quillt_pkgdown()` will add a Github Action configured to follow the deployment partern of R Markdown ecosystem
 
-*  `pkgdown.css` comes from pkgdown.
+* Build on GHA
+* Deploy on Netlify using the CLI
+* Add the website main url to `pkgs.rstudio.com/`
 
 ## Lorem Ipsum
 
