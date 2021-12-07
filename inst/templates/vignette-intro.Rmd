@@ -14,19 +14,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Overview
+## Overview
 
 If you are new to using {{{ Package }}}, we encourage you to ...
 
-# User Guide
+## User Guide
 
 Written by ...
 
-# Going further with examples
+## Going further with examples
 
 Learn from examples at ...
 
-# Cheatsheets
+## Cheatsheets
 
 You can access it at... 
 
