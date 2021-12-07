@@ -57,7 +57,7 @@ copy_assets <- function(snippets = TRUE, holder = TRUE, .overwrite = TRUE) {
 #' `pkgdown/templates` folder for [website customisation](https://pkgdown.r-lib.org/articles/customise.html#additional-html-and-files).
 #'
 #' @export
-copy_pkgdown_templates <- function() {
+copy_pkgdown_templates <- function(.overwrite = TRUE) {
   templates <- system.file("assets", "pkgdown", "templates", package = "quillt")
   pkgdown_templates <- "pkgdown/templates"
   fs::dir_create(pkgdown_templates)
