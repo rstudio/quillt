@@ -35,7 +35,13 @@ navbar:
   components:
     examples:
       text: Examples
-      href: articles/articles/examples.html
+      href: articles/examples.html
+
+articles:
+- title: Testing
+  navbar: ~
+  contents:
+  - articles/test-style
 
 news:
   releases:
