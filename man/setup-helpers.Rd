@@ -54,8 +54,12 @@ team and are useful to setup a new pkgdown project with \strong{quillt}
 \itemize{
 \item \code{use_coc()}: use \code{usethis::use_tidy_coc()} and put _CODE\_OF\\emph{CONDUCT.md} in
 \verb{.github/} directory setting the contact email to Rstudio one.
-\item \code{use_contributing}: Add a \emph{CONTRIBUTING.md} file in \verb{.github/} following a
+\item \code{use_contributing()}: Add a \emph{CONTRIBUTING.md} file in \verb{.github/} following a
 template in \strong{quillt}. Inspired by \code{usethis::use_tidy_contributing()}.
+\item \code{use_quillt_pkgdown()}: Create all the necessary files and configuration to
+configure a pkgdown website to use theming and organization for the R
+Markdown ecosystem. It adds pkgdown configuration, dependencies in
+DESCRIPTION, template for vignettes (including the Example gallery one) and other common assets.
 \item \code{use_github_action_quillt_pkgdown()}: Set a Github Action workflow to build a
 pkgdown website and deploy to Netlify. The deployment action use allow a main
 deploy branch and PR previews. This action will be triggered on PR only for
