@@ -32,9 +32,20 @@ development:
 
 home:
   links:
-  - text: Learn more
-    # if relevant, set url to another website i.e https://rmarkdown.rstudio.com
-    href: ""
+  - text: Learn more about R Markdown
+    href: "https://rmarkdown.rstudio.com"
+
+# custom footer for rmarkdown ecosystem
+footer:
+  structure:
+    left: [rmd]
+    right: [developed_by, p, built_with]
+  components:
+      p: "\n\n"
+      rmd: |
+        **quillt** is a part of the **R Markdown** ecosystem of packages for creating
+        computational documents in R.<br>Learn more at
+        [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/).
 
 # structure of website themed with quillt
 navbar:
@@ -45,6 +56,7 @@ navbar:
       text: Examples
       href: articles/examples.html
 
+# https://pkgdown.r-lib.org/dev/reference/build_articles.html#index-and-navbar
 articles:
 - title: Testing
   navbar: ~
