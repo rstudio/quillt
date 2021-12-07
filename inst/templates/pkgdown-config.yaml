@@ -18,15 +18,6 @@ template:
     twitter:
       creator: "@rstudio"
       card: summary
-  includes:
-    # custom resource for R Markdown ecosystem
-    # Remove if not needed - in that case remove also files in `pkgdown/assets`
-    in_header: >
-      <!-- javascript assets for rmarkdown -->
-      <script src="ace-1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
-      <script src="holder-2.9.0/holder.min.js" type="text/javascript" charset="utf-8"></script>
-      <script src="snippets/snippets.js" type="text/javascript" charset="utf-8"></script>
-
 
 development:
   version_tooltip: "Development version"
