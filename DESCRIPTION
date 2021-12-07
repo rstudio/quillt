@@ -32,5 +32,4 @@ Suggests:
 Config/testthat/edition: 3
 Config/Needs/website: pkgdown,
  rstudio/webshot2,
- tidyverse/tidytemplate,
- rstudio/quillt
+ tidyverse/tidytemplate
