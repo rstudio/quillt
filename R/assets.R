@@ -56,6 +56,7 @@ copy_assets <- function(snippets = TRUE, holder = TRUE, .overwrite = TRUE) {
 #' website. They will be copied from `quillt` package installation to
 #' `pkgdown/templates` folder for [website customisation](https://pkgdown.r-lib.org/articles/customise.html#additional-html-and-files).
 #'
+#' @inheritParams copy_assets
 #' @export
 copy_pkgdown_templates <- function(.overwrite = TRUE) {
   templates <- system.file("assets", "pkgdown", "templates", package = "quillt")

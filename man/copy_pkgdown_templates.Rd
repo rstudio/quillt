@@ -4,7 +4,11 @@
 \alias{copy_pkgdown_templates}
 \title{Copy pkgdown template in local pkgdown website}
 \usage{
-copy_pkgdown_templates()
+copy_pkgdown_templates(.overwrite = TRUE)
+}
+\arguments{
+\item{.overwrite}{Should it overwrite existing copy ? \code{TRUE} by default
+assuming git tracking is used.}
 }
 \description{
 This is a helper to retrieve locally some specific template to tweak pkgdown
