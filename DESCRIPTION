@@ -28,7 +28,8 @@ Suggests:
     withr (>= 2.3.0),
     usethis (>= 2.1.3),
     rmarkdown,
-    pkgdown (>= 2.0.1)
+    pkgdown (>= 2.0.1),
+    fs
 Config/testthat/edition: 3
 Config/Needs/website: pkgdown,
  rstudio/webshot2,
