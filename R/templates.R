@@ -8,8 +8,13 @@
 #' + `use_coc()`: use `usethis::use_tidy_coc()` and put _CODE\_OF\_CONDUCT.md_ in
 #' `.github/` directory setting the contact email to Rstudio one.
 #'
-#' + `use_contributing`: Add a _CONTRIBUTING.md_ file in `.github/` following a
+#' + `use_contributing()`: Add a _CONTRIBUTING.md_ file in `.github/` following a
 #' template in **quillt**. Inspired by `usethis::use_tidy_contributing()`.
+#'
+#' + `use_quillt_pkgdown()`: Create all the necessary files and configuration to
+#' configure a pkgdown website to use theming and organization for the R
+#' Markdown ecosystem. It adds pkgdown configuration, dependencies in
+#' DESCRIPTION, template for vignettes (including the Example gallery one) and other common assets.
 #'
 #' + `use_github_action_quillt_pkgdown()`: Set a Github Action workflow to build a
 #' pkgdown website and deploy to Netlify. The deployment action use allow a main
@@ -45,9 +50,13 @@ use_contributing <- function() {
 #' @rdname setup-helpers
 use_github_action_quillt_pkgdown <- function() {
   check_installed("usethis")
-  usethis:::use_dot_github()
+  check_installed("fs")
+  usethis:::use_dot_github(ignore = TRUE)
   template <- usethis:::find_template("pkgdown-gha.yaml", package = "quillt")
-  usethis::use_github_action(url = template, save_as = "pkgdown.yaml", ignore = TRUE, open = FALSE)
+  save_as <- fs::path(".github", "workflows", "pkgdown.yaml")
+  usethis:::create_directory(fs::path_dir(usethis:::proj_path(save_as)))
+  content <- usethis:::read_utf8(template)
+  usethis:::write_over(save_as, content)
   usethis::ui_todo("Check deployment action configuration, specifically main deploy branch.")
   usethis::ui_todo("Set Github Secrets for Netlify deployment:")
   usethis::ui_line("   - NETLIFY_AUTH_TOKEN")
@@ -68,12 +77,24 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
 
   # Add pkgdown config to use with quillt
   usethis::ui_info("Adding pkgdown config for quillt-like project.")
-  data <- list(Package = usethis:::project_name(),
-               destdir = destdir,
-               github_url = usethis:::github_url())
+  data <- list(
+    Package = usethis:::project_name(),
+    destdir = destdir,
+    github_url = usethis:::github_url()
+  )
   use_template("pkgdown-config.yaml", "_pkgdown.yml", data = data)
   usethis::use_build_ignore(c(config_file, destdir, "pkgdown"))
   usethis::use_git_ignore(destdir)
+
+  # Copy JS assets
+  copy_assets()
+
+  # Copy pkgdown template
+  copy_pkgdown_templates()
+
+  # Add dependencies in DESCRIPTION
+  usethis::ui_info("Adding to dependencies to {usethis::ui_field('Config/Needs/website')}")
+  usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
 
   # Add folder for articles
   usethis::ui_info("Adding articles subdir in 'vignettes/' folder.")
@@ -103,10 +124,12 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
 
   # TODOS
   usethis::ui_info("What is left to be done ?")
+  usethis::ui_todo("Check and adapt configuration in {usethis::ui_field(config_file)}.")
+  usethis::ui_todo("Remove {usethis::ui_code('in_header')} and associated {usethis::ui_field('pkgdown/assets/')} if you don't need them.")
   usethis::ui_todo("Add a logo in {usethis::ui_field('man/figures/logo.png')}. \\
                    with {usethis::ui_code('usethis::use_logo()')}.")
-  usethis::ui_todo("Check and adapt configuration in {usethis::ui_field(config_file)}.")
   usethis::ui_todo("Add examples to {usethis::ui_field(yml_ex) } for the Examples article")
+  usethis::ui_todo("Remove {usethis::ui_field('rstudio/quillt')} from {usethis::ui_code('Config/Needs/website')} if you don't use Examples gallery.")
   usethis::ui_todo("Add learning resources to  {usethis::ui_field(intro_rmd)} for the Get Started section.")
   usethis::ui_todo("Add github action workflow with {usethis::ui_code('quillt::use_github_action_quillt_pkgdown()')}")
 }
