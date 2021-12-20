@@ -50,7 +50,7 @@ navbar:
 
 # Add articles menu using
 # https://pkgdown.r-lib.org/dev/reference/build_articles.html#index-and-navbar
-# aticles:
+# articles:
 
 news:
   releases:
