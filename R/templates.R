@@ -60,6 +60,15 @@ use_github_action_quillt_pkgdown <- function() {
 }
 
 #' @export
+#' @rdname setup-helpers
+use_github_action_lock_thread <- function() {
+  check_installed("usethis")
+  usethis:::use_dot_github(ignore = TRUE)
+  template <- usethis:::find_template("lock-gha.yaml", package = "quillt")
+  usethis::use_github_action("lock.yaml", url = template, save_as = "lock.yaml", ignore = TRUE, open = FALSE)
+}
+
+#' @export
 #' @param config_file Path to the pkgdown yaml config file - could be set to be
 #'   `pkgdown/` subfolder.
 #' @param destdir Target directory for pkgdown docs. By default, it will be in

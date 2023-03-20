@@ -5,6 +5,7 @@
 \alias{use_coc}
 \alias{use_contributing}
 \alias{use_github_action_quillt_pkgdown}
+\alias{use_github_action_lock_thread}
 \alias{use_quillt_pkgdown}
 \alias{use_quillt_issue_template}
 \title{Helpers for project setup with quillt}
@@ -14,6 +15,8 @@ use_coc()
 use_contributing()
 
 use_github_action_quillt_pkgdown()
+
+use_github_action_lock_thread()
 
 use_quillt_pkgdown(config_file = "_pkgdown.yml", destdir = "reference")
 

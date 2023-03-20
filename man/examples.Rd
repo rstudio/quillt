@@ -32,14 +32,16 @@ the expecting information and build the HTML to be included in the \code{example
 }
 \section{Functions}{
 \itemize{
-\item \code{examples}: Create the HTML for an Examples showcase page
+\item \code{examples()}: Create the HTML for an Examples showcase page
 
-\item \code{template_examples_resource_files}: Produce \code{resource_files} YAML for images with relative
+\item \code{template_examples_resource_files()}: Produce \code{resource_files} YAML for images with relative
 URLs in the examples YAML file
-}}
 
+}}
 \section{YAML structure}{
-The YAML should be following this example\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
+The YAML should be following this example
+
+\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{- title: title to use as tooltip and caption # mandatory
   href: link to use when the image or caption is clicked # mandatory
   img: link to the image to use in thumbnail # mandatory
   source: link to the source repo to link to from the caption # optional
