@@ -169,7 +169,8 @@ use_quillt_issue_template <- function(issue_guide = TRUE, community = TRUE, so =
                file.path(".github", "ISSUE_TEMPLATE", "config.yml"),
                data = data)
 
-  data <- list(Package = usethis:::project_name())
+  data <- list(Package = usethis:::project_name(),
+               repo_spec = usethis:::target_repo()$repo_spec)
   use_template("issue_template-bug-report.md",
                file.path(".github", "ISSUE_TEMPLATE", "bug-report.md"),
                data = data)
