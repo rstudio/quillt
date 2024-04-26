@@ -1,6 +1,6 @@
 Package: quillt
 Title: 'pkgdown' Template for the R Markdown Ecosystem
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
     person("Alison", "Hill", , "alison@rstudio.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8082-1890")),
