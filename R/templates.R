@@ -156,7 +156,7 @@ use_quillt_issue_template <- function(issue_guide = TRUE, community = TRUE, so =
   usethis:::use_dot_github()
   usethis::use_directory(file.path(".github", "ISSUE_TEMPLATE"))
   # Github issue chooser
-  community <- if(community) "https://community.rstudio.com/" else ""
+  community <- if(community) "https://forum.posit.co/" else ""
   so <- if (so) "https://stackoverflow.com/questions/tagged/r" else ""
   issue_guide <- if (issue_guide) "https://yihui.org/issue/" else ""
   links <- nzchar(issue_guide) || nzchar(community) || nzchar(so)
