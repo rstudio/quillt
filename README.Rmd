@@ -17,9 +17,9 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-quillt is a package containing helpers functions and resources mainly useful for projects in the R Markdown ecosysteme, like creating [pkgdown](https://pkgdown.r-lib.org) website. Previously, it contained a **pkgdown** template for the R Markdown ecosystem, but now **tidytemplate** is used. 
+quillt is a package containing helpers functions and resources mainly useful for projects in the R Markdown ecosystem, like creating [pkgdown](https://pkgdown.r-lib.org) websites. Previously, it contained a **pkgdown** template for the R Markdown ecosystem, but now **tidytemplate** is used. 
 
-All those website are by default aimed to be made available through https://pkgs.rstudio.com/
+All those websites are by default aimed to be made available through https://pkgs.rstudio.com/
 
 The goal of quillt is to create a patchwork quilt of all the packages that R Markdown users benefit from. That means packages that help users extend R Markdown using new output formats and templates, or that build upon existing packages to improve the quality of life for R Markdown users. 
 
@@ -38,7 +38,7 @@ This will leave you with so more steps described in a checklist. Also, some file
 
 See [Reference page](https://pkgs.rstudio.com/quillt/reference/index.html#section-examples-gallery-helpers) and [examples](articles/examples.html)
 
-## Ressources
+## Resources
 
 **quillt** also contains some JS files useful across the website. They are locally copied when creating a new pkgdown website with `use_quillt_pkgdown()`.
 
