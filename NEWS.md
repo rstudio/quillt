@@ -1,3 +1,7 @@
+# quillt (development version)
+
+- fix redirect rule to support hash (thanks, @gadenbuie, #45).
+
 # quillt 0.0.1
 
 * the package will be no more used as a **pkgdown** template as **tidytemplate** will be used. This version adapt the function so that templates, configurations and resources up to date.
