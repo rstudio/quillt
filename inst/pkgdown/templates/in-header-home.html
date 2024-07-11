@@ -1,6 +1,8 @@
 <!-- from quillt: JS redirect for homepage -->
 <script>
-  if (!/(\/|html?)$/.test(window.location.href)){
-    window.location.replace(window.location.href + '/');
+  if (!/(\/|html?)$/.test(window.location.pathname)) {
+    const newHome = new URL(window.location.href);
+    newHome.pathname = newHome.pathname + '/';
+    window.location.replace(newHome.toString())
   }
 </script>
