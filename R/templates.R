@@ -99,7 +99,7 @@ use_quillt_pkgdown <- function(config_file = "_pkgdown.yml", destdir = "referenc
 
   # Add dependencies in DESCRIPTION
   usethis::ui_info("Adding to dependencies to {usethis::ui_field('Config/Needs/website')}")
-  usethis:::use_description_list("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
+  usethis:::proj_desc_field_update("Config/Needs/website", c("pkgdown", "tidyverse/tidytemplate", "rstudio/quillt"))
 
   # Add folder for articles
   usethis::ui_info("Adding articles subdir in 'vignettes/' folder.")
